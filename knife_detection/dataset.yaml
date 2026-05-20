@@ -1,0 +1,6 @@
+path: .
+train: knife_detection/splits/train.txt
+val: knife_detection/splits/val.txt
+
+nc: 1
+names: [knife]

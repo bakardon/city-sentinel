@@ -1,0 +1,6 @@
+path: .
+train: weapon_detection/splits/train.txt
+val: weapon_detection/splits/val.txt
+
+nc: 28
+names: ['Aggressor', 'Blood', 'Guns', 'Guns perspective', 'Hand', 'Heavy Gun', 'Knife', 'Knife_Deploy', 'Knife_Weapon', 'Long guns', 'Person', 'Pistol', 'Rifle', 'Shotgun', 'Stabbing', 'Victim', 'al', 'guns', 'handgun', 'heavyweapon', 'larga', 'person', 'pistol', 'pistols', 'rifle', 'shotgun', 'violence', 'weapon']

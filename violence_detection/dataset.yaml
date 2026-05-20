@@ -1,0 +1,6 @@
+path: .
+train: violence_detection/splits/train.txt
+val: violence_detection/splits/val.txt
+
+nc: 2
+names: ['NonViolence', 'Violence']

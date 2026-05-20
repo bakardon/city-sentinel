@@ -1,0 +1,265 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="Deployment Diagram" id="deployment-1">
+    <mxGraphModel dx="1800" dy="1000" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="3400" pageHeight="2400" math="0" shadow="0">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+
+        <!-- ============================================================
+             OUTER BORDER + TITLE
+        ============================================================ -->
+        <mxCell id="border" value="&lt;font style=&quot;font-size:45px;&quot;&gt;&lt;b&gt;DEPLOYMENT DIAGRAM&lt;/b&gt;&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f9f9f9;strokeColor=#102A6B;strokeWidth=4;verticalAlign=top;align=center;spacingTop=25;" vertex="1" parent="1">
+          <mxGeometry x="40" y="40" width="3320" height="2300" as="geometry"/>
+        </mxCell>
+
+        <!-- ============================================================
+             OPERATOR WORKSTATION  (left side)
+        ============================================================ -->
+        <mxCell id="ws-outer" value="" style="rounded=1;whiteSpace=wrap;html=1;strokeWidth=3;strokeColor=#1B3A6B;fillColor=#F0F4FA;shadow=1;arcSize=6;" vertex="1" parent="1">
+          <mxGeometry x="100" y="160" width="1100" height="1060" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="ws-stereo" value="&lt;font style=&quot;font-size:40px;&quot;&gt;&lt;i&gt;&amp;lt;&amp;lt;Device&amp;gt;&amp;gt;&lt;/i&gt;&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="350" y="180" width="600" height="60" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="ws-title" value="&lt;font style=&quot;font-size:45px;&quot;&gt;&lt;b&gt;Operator Workstation&lt;/b&gt;&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="250" y="240" width="800" height="70" as="geometry"/>
+        </mxCell>
+
+        <!-- Web Browser inner box -->
+        <mxCell id="browser-box" value="" style="rounded=1;whiteSpace=wrap;html=1;strokeWidth=2;strokeColor=#23395d;fillColor=#E4EAF5;shadow=1;arcSize=8;" vertex="1" parent="1">
+          <mxGeometry x="160" y="340" width="980" height="440" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="browser-title" value="&lt;font style=&quot;font-size:45px;&quot;&gt;&lt;b&gt;Web Browser&lt;/b&gt;&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="350" y="360" width="600" height="70" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="browser-sub" value="&lt;font style=&quot;font-size:40px;&quot;&gt;(Chrome / Firefox)&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="350" y="430" width="600" height="60" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="nextjs-line1" value="&lt;font style=&quot;font-size:40px;&quot;&gt;Next.js App (port 3000)&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="300" y="520" width="700" height="60" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="nextjs-line2" value="&lt;font style=&quot;font-size:40px;&quot;&gt;served by Next.js dev&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="300" y="580" width="700" height="60" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="nextjs-line3" value="&lt;font style=&quot;font-size:40px;&quot;&gt;or 'next start'&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="300" y="640" width="700" height="60" as="geometry"/>
+        </mxCell>
+
+        <!-- Webcam inner box -->
+        <mxCell id="webcam-box" value="" style="rounded=1;whiteSpace=wrap;html=1;strokeWidth=2;strokeColor=#23395d;fillColor=#E4EAF5;shadow=1;arcSize=8;" vertex="1" parent="1">
+          <mxGeometry x="160" y="830" width="980" height="340" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="webcam-title" value="&lt;font style=&quot;font-size:45px;&quot;&gt;&lt;b&gt;Webcam (USB)&lt;/b&gt;&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="350" y="870" width="600" height="70" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="webcam-api" value="&lt;font style=&quot;font-size:40px;&quot;&gt;MediaStream API&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="350" y="960" width="600" height="60" as="geometry"/>
+        </mxCell>
+
+        <!-- ============================================================
+             APPLICATION SERVER  (center-right)
+        ============================================================ -->
+        <mxCell id="srv-outer" value="" style="rounded=1;whiteSpace=wrap;html=1;strokeWidth=3;strokeColor=#1B3A6B;fillColor=#F0F4FA;shadow=1;arcSize=4;" vertex="1" parent="1">
+          <mxGeometry x="1400" y="160" width="1200" height="1680" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="srv-stereo" value="&lt;font style=&quot;font-size:40px;&quot;&gt;&lt;i&gt;&amp;lt;&amp;lt;Device&amp;gt;&amp;gt;&lt;/i&gt;&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="1700" y="180" width="600" height="60" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="srv-title" value="&lt;font style=&quot;font-size:45px;&quot;&gt;&lt;b&gt;Application Server (On-premises)&lt;/b&gt;&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="1500" y="240" width="1000" height="70" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="srv-os" value="&lt;font style=&quot;font-size:40px;&quot;&gt;Ubuntu 22.04 LTS / Windows 11 Pro&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="1550" y="310" width="900" height="60" as="geometry"/>
+        </mxCell>
+
+        <!-- uvicorn / FastAPI box -->
+        <mxCell id="uvicorn-box" value="" style="rounded=1;whiteSpace=wrap;html=1;strokeWidth=2;strokeColor=#23395d;fillColor=#E4EAF5;shadow=1;arcSize=6;" vertex="1" parent="1">
+          <mxGeometry x="1460" y="400" width="1080" height="420" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="uvicorn-title" value="&lt;font style=&quot;font-size:45px;&quot;&gt;&lt;b&gt;uvicorn (ASGI)&lt;/b&gt;&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="1660" y="420" width="680" height="70" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="uvicorn-port" value="&lt;font style=&quot;font-size:40px;&quot;&gt;port 8010&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="1660" y="490" width="680" height="60" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="fastapi-label" value="&lt;font style=&quot;font-size:40px;&quot;&gt;FastAPI app/main.py&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="1660" y="560" width="680" height="60" as="geometry"/>
+        </mxCell>
+
+        <!-- ML Model Runtimes sub-box inside uvicorn -->
+        <mxCell id="ml-box" value="" style="rounded=1;whiteSpace=wrap;html=1;strokeWidth=2;strokeColor=#23395d;fillColor=#D6DDEF;shadow=0;arcSize=8;" vertex="1" parent="1">
+          <mxGeometry x="1520" y="640" width="960" height="150" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="ml-title" value="&lt;font style=&quot;font-size:40px;&quot;&gt;&lt;b&gt;ML Model Runtimes&lt;/b&gt;&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=20;" vertex="1" parent="1">
+          <mxGeometry x="1540" y="648" width="500" height="55" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="ml-insight" value="&lt;font style=&quot;font-size:40px;&quot;&gt;InsightFace (ONNX) &amp;nbsp;|&amp;nbsp; YOLOv8 (.pt/.onnx) &amp;nbsp;|&amp;nbsp; EasyOCR&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="1540" y="710" width="920" height="60" as="geometry"/>
+        </mxCell>
+
+        <!-- RTSP Stream Manager box -->
+        <mxCell id="rtsp-box" value="" style="rounded=1;whiteSpace=wrap;html=1;strokeWidth=2;strokeColor=#23395d;fillColor=#E4EAF5;shadow=1;arcSize=6;" vertex="1" parent="1">
+          <mxGeometry x="1460" y="870" width="1080" height="200" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="rtsp-title" value="&lt;font style=&quot;font-size:45px;&quot;&gt;&lt;b&gt;RTSP Stream Manager&lt;/b&gt;&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="1600" y="890" width="800" height="70" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="rtsp-sub" value="&lt;font style=&quot;font-size:40px;&quot;&gt;(Thread pool)&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="1600" y="960" width="800" height="60" as="geometry"/>
+        </mxCell>
+
+        <!-- GPU / CPU box -->
+        <mxCell id="gpu-box" value="" style="rounded=1;whiteSpace=wrap;html=1;strokeWidth=2;strokeColor=#23395d;fillColor=#E4EAF5;shadow=1;arcSize=6;" vertex="1" parent="1">
+          <mxGeometry x="1460" y="1120" width="1080" height="300" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="gpu-title" value="&lt;font style=&quot;font-size:45px;&quot;&gt;&lt;b&gt;GPU / CPU (CUDA / CPU)&lt;/b&gt;&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="1600" y="1150" width="800" height="70" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="gpu-nvidia" value="&lt;font style=&quot;font-size:40px;&quot;&gt;NVIDIA RTX (recommended)&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="1600" y="1240" width="800" height="60" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="gpu-fallback" value="&lt;font style=&quot;font-size:40px;&quot;&gt;or CPU (fallback)&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="1600" y="1310" width="800" height="60" as="geometry"/>
+        </mxCell>
+
+        <!-- ============================================================
+             IP CAMERA 1  (bottom-left)
+        ============================================================ -->
+        <mxCell id="cam1-outer" value="" style="rounded=1;whiteSpace=wrap;html=1;strokeWidth=3;strokeColor=#1B3A6B;fillColor=#F0F4FA;shadow=1;arcSize=8;" vertex="1" parent="1">
+          <mxGeometry x="100" y="1500" width="580" height="340" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="cam1-stereo" value="&lt;font style=&quot;font-size:40px;&quot;&gt;&lt;i&gt;&amp;lt;&amp;lt;Device&amp;gt;&amp;gt;&lt;/i&gt;&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="140" y="1520" width="500" height="60" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="cam1-title" value="&lt;font style=&quot;font-size:45px;&quot;&gt;&lt;b&gt;IP Camera 1 (Network)&lt;/b&gt;&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="120" y="1590" width="540" height="70" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="cam1-rtsp" value="&lt;font style=&quot;font-size:40px;&quot;&gt;RTSP rtsp://10.1.x.x:554/...&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="120" y="1680" width="540" height="60" as="geometry"/>
+        </mxCell>
+
+        <!-- ============================================================
+             IP CAMERA 2  (bottom-center)
+        ============================================================ -->
+        <mxCell id="cam2-outer" value="" style="rounded=1;whiteSpace=wrap;html=1;strokeWidth=3;strokeColor=#1B3A6B;fillColor=#F0F4FA;shadow=1;arcSize=8;" vertex="1" parent="1">
+          <mxGeometry x="760" y="1500" width="580" height="340" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="cam2-stereo" value="&lt;font style=&quot;font-size:40px;&quot;&gt;&lt;i&gt;&amp;lt;&amp;lt;Device&amp;gt;&amp;gt;&lt;/i&gt;&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="800" y="1520" width="500" height="60" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="cam2-title" value="&lt;font style=&quot;font-size:45px;&quot;&gt;&lt;b&gt;IP Camera 2 (Network)&lt;/b&gt;&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="780" y="1590" width="540" height="70" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="cam2-rtsp" value="&lt;font style=&quot;font-size:40px;&quot;&gt;RTSP rtsp://10.1.x.x:554/...&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="780" y="1680" width="540" height="60" as="geometry"/>
+        </mxCell>
+
+        <!-- ============================================================
+             SUPABASE CLOUD SERVICE  (bottom-right)
+        ============================================================ -->
+        <mxCell id="cloud-outer" value="" style="rounded=1;whiteSpace=wrap;html=1;strokeWidth=3;strokeColor=#1B3A6B;fillColor=#F0F4FA;shadow=1;arcSize=6;" vertex="1" parent="1">
+          <mxGeometry x="1700" y="1560" width="880" height="680" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="cloud-stereo" value="&lt;font style=&quot;font-size:40px;&quot;&gt;&lt;i&gt;&amp;lt;&amp;lt;Cloud Service&amp;gt;&amp;gt;&lt;/i&gt;&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="1850" y="1580" width="580" height="60" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="cloud-title" value="&lt;font style=&quot;font-size:45px;&quot;&gt;&lt;b&gt;Supabase&lt;/b&gt;&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="1850" y="1650" width="580" height="70" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="cloud-sub1" value="&lt;font style=&quot;font-size:40px;&quot;&gt;(PostgreSQL + Storage)&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="1850" y="1720" width="580" height="60" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="cloud-sub2" value="&lt;font style=&quot;font-size:40px;&quot;&gt;supabase.co (hosted)&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="1850" y="1780" width="580" height="60" as="geometry"/>
+        </mxCell>
+
+        <!-- Tables sub-box -->
+        <mxCell id="tables-box" value="" style="rounded=1;whiteSpace=wrap;html=1;strokeWidth=2;strokeColor=#23395d;fillColor=#D6DDEF;shadow=0;arcSize=8;" vertex="1" parent="1">
+          <mxGeometry x="1760" y="1870" width="760" height="150" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="tables-title" value="&lt;font style=&quot;font-size:40px;&quot;&gt;&lt;b&gt;Tables:&lt;/b&gt; persons, events, vehicles, ...&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="1780" y="1900" width="720" height="60" as="geometry"/>
+        </mxCell>
+
+        <!-- Storage sub-box -->
+        <mxCell id="storage-box" value="" style="rounded=1;whiteSpace=wrap;html=1;strokeWidth=2;strokeColor=#23395d;fillColor=#D6DDEF;shadow=0;arcSize=8;" vertex="1" parent="1">
+          <mxGeometry x="1760" y="2050" width="760" height="150" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="storage-title" value="&lt;font style=&quot;font-size:40px;&quot;&gt;&lt;b&gt;Storage:&lt;/b&gt; snapshots, clips&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="1780" y="2080" width="720" height="60" as="geometry"/>
+        </mxCell>
+
+        <!-- ============================================================
+             ARROWS / CONNECTIONS
+        ============================================================ -->
+
+        <!-- Browser → FastAPI  (HTTP / WS) -->
+        <mxCell id="arrow-browser-fastapi" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=3;strokeColor=#E94560;dashed=1;dashPattern=8 4;endArrow=classic;endFill=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.35;entryDx=0;entryDy=0;" edge="1" parent="1" source="browser-box" target="uvicorn-box">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="arrow-browser-label" value="&lt;font style=&quot;font-size:40px;&quot;&gt;&lt;b&gt;HTTP / WS&lt;/b&gt;&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontColor=#E94560;" vertex="1" parent="1">
+          <mxGeometry x="1180" y="480" width="280" height="60" as="geometry"/>
+        </mxCell>
+
+        <!-- Camera 1 → RTSP Manager -->
+        <mxCell id="arrow-cam1-rtsp" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=3;strokeColor=#1B3A6B;endArrow=classic;endFill=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="cam1-outer" target="rtsp-box">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="arrow-cam1-label" value="&lt;font style=&quot;font-size:40px;&quot;&gt;&lt;b&gt;RTSP&lt;/b&gt;&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontColor=#1B3A6B;" vertex="1" parent="1">
+          <mxGeometry x="320" y="1400" width="200" height="60" as="geometry"/>
+        </mxCell>
+
+        <!-- Camera 2 → RTSP Manager -->
+        <mxCell id="arrow-cam2-rtsp" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=3;strokeColor=#1B3A6B;endArrow=classic;endFill=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0;entryY=0.75;entryDx=0;entryDy=0;" edge="1" parent="1" source="cam2-outer" target="rtsp-box">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="arrow-cam2-label" value="&lt;font style=&quot;font-size:40px;&quot;&gt;&lt;b&gt;RTSP&lt;/b&gt;&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontColor=#1B3A6B;" vertex="1" parent="1">
+          <mxGeometry x="960" y="1400" width="200" height="60" as="geometry"/>
+        </mxCell>
+
+        <!-- Server → Supabase  (REST / SQL) -->
+        <mxCell id="arrow-srv-cloud" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=3;strokeColor=#E94560;dashed=1;dashPattern=8 4;endArrow=classic;endFill=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="gpu-box" target="cloud-outer">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="arrow-srv-cloud-label" value="&lt;font style=&quot;font-size:40px;&quot;&gt;&lt;b&gt;REST / SQL&lt;/b&gt;&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontColor=#E94560;" vertex="1" parent="1">
+          <mxGeometry x="2160" y="1470" width="280" height="60" as="geometry"/>
+        </mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mxGraphModel dx="1422" dy="762" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="2200" pageHeight="3000" math="0" shadow="0">
+  <root>
+    <mxCell id="0" />
+    <mxCell id="1" parent="0" />
+
+    <!-- Outer border / title -->
+    <mxCell id="2" value="&lt;font style=&quot;font-size:45px;&quot;&gt;&lt;b&gt;ENTITY-RELATIONSHIP DIAGRAM&lt;/b&gt;&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f9f9f9;strokeColor=#102A6B;strokeWidth=4;verticalAlign=top;align=center;spacingTop=20;" vertex="1" parent="1">
+      <mxGeometry x="40" y="40" width="2120" height="2880" as="geometry" />
+    </mxCell>
+
+    <!-- ═══════════════════════════════════════════════════════
+         PERSONS  (left column)
+         ─ header: 45 px bold, dark navy
+         ─ body:   40 px, 10 rows → height 640
+    ═══════════════════════════════════════════════════════ -->
+    <mxCell id="10" value="&lt;font style=&quot;font-size:45px;&quot;&gt;&lt;b&gt;PERSONS&lt;/b&gt;&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#1B3A6B;fontColor=#FFFFFF;strokeColor=#1B3A6B;strokeWidth=2;verticalAlign=middle;align=center;" vertex="1" parent="1">
+      <mxGeometry x="90" y="160" width="920" height="88" as="geometry" />
+    </mxCell>
+    <mxCell id="11" value="&lt;font style=&quot;font-size:40px;&quot;&gt;&lt;b&gt;PK&lt;/b&gt;  id&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;UUID&lt;br/&gt;name&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;TEXT&lt;br/&gt;embedding&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;FLOAT[]&lt;br/&gt;image_b64&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;TEXT&lt;br/&gt;age&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;TEXT&lt;br/&gt;phone&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;TEXT&lt;br/&gt;address&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;TEXT&lt;br/&gt;notes&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;TEXT&lt;br/&gt;tags&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;TEXT[]&lt;br/&gt;created_at&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;TIMESTAMPTZ&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#EBF0FA;strokeColor=#1B3A6B;strokeWidth=2;verticalAlign=top;align=left;spacingLeft=22;spacingTop=14;overflow=hidden;" vertex="1" parent="1">
+      <mxGeometry x="90" y="248" width="920" height="650" as="geometry" />
+    </mxCell>
+
+    <!-- ═══════════════════════════════════════════════════════
+         PERSON_EVENTS  (right column)
+         ─ 7 rows → height 470
+    ═══════════════════════════════════════════════════════ -->
+    <mxCell id="20" value="&lt;font style=&quot;font-size:45px;&quot;&gt;&lt;b&gt;PERSON_EVENTS&lt;/b&gt;&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#1B3A6B;fontColor=#FFFFFF;strokeColor=#1B3A6B;strokeWidth=2;verticalAlign=middle;align=center;" vertex="1" parent="1">
+      <mxGeometry x="1170" y="160" width="940" height="88" as="geometry" />
+    </mxCell>
+    <mxCell id="21" value="&lt;font style=&quot;font-size:40px;&quot;&gt;&lt;b&gt;PK&lt;/b&gt;  id&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;UUID&lt;br/&gt;&lt;b&gt;FK&lt;/b&gt;  person_id&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;UUID → persons&lt;br/&gt;event_type&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;TEXT&lt;br/&gt;camera_id&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;TEXT&lt;br/&gt;location&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;TEXT&lt;br/&gt;timestamp&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;TIMESTAMPTZ&lt;br/&gt;similarity&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;FLOAT&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#EBF0FA;strokeColor=#1B3A6B;strokeWidth=2;verticalAlign=top;align=left;spacingLeft=22;spacingTop=14;overflow=hidden;" vertex="1" parent="1">
+      <mxGeometry x="1170" y="248" width="940" height="470" as="geometry" />
+    </mxCell>
+
+    <!-- Relationship arrow: 1 ──── * -->
+    <mxCell id="30" value="" style="endArrow=ERmany;startArrow=ERone;html=1;strokeColor=#1B3A6B;strokeWidth=3;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" source="11" target="21" parent="1">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+    <mxCell id="31" value="&lt;font style=&quot;font-size:40px;&quot;&gt;&lt;b&gt;1&lt;/b&gt;&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;" vertex="1" parent="1">
+      <mxGeometry x="1020" y="545" width="55" height="55" as="geometry" />
+    </mxCell>
+    <mxCell id="32" value="&lt;font style=&quot;font-size:40px;&quot;&gt;&lt;b&gt;*&lt;/b&gt;&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;" vertex="1" parent="1">
+      <mxGeometry x="1100" y="545" width="55" height="55" as="geometry" />
+    </mxCell>
+
+    <!-- ═══════════════════════════════════════════════════════
+         VEHICLE_EVENTS  (left column, row 2)
+         ─ 7 rows → height 470
+    ═══════════════════════════════════════════════════════ -->
+    <mxCell id="40" value="&lt;font style=&quot;font-size:45px;&quot;&gt;&lt;b&gt;VEHICLE_EVENTS&lt;/b&gt;&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#23395d;fontColor=#FFFFFF;strokeColor=#23395d;strokeWidth=2;verticalAlign=middle;align=center;" vertex="1" parent="1">
+      <mxGeometry x="90" y="1020" width="920" height="88" as="geometry" />
+    </mxCell>
+    <mxCell id="41" value="&lt;font style=&quot;font-size:40px;&quot;&gt;&lt;b&gt;PK&lt;/b&gt;  id&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;UUID&lt;br/&gt;plate_text&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;TEXT&lt;br/&gt;confidence&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;FLOAT&lt;br/&gt;camera_id&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;TEXT&lt;br/&gt;event_type&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;TEXT&lt;br/&gt;timestamp&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;TIMESTAMPTZ&lt;br/&gt;image_b64&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;TEXT&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#EBF0FA;strokeColor=#23395d;strokeWidth=2;verticalAlign=top;align=left;spacingLeft=22;spacingTop=14;overflow=hidden;" vertex="1" parent="1">
+      <mxGeometry x="90" y="1108" width="920" height="470" as="geometry" />
+    </mxCell>
+
+    <!-- ═══════════════════════════════════════════════════════
+         FIRE_EVENTS  (right column, row 2)
+         ─ 6 rows → height 410
+    ═══════════════════════════════════════════════════════ -->
+    <mxCell id="42" value="&lt;font style=&quot;font-size:45px;&quot;&gt;&lt;b&gt;FIRE_EVENTS&lt;/b&gt;&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#23395d;fontColor=#FFFFFF;strokeColor=#23395d;strokeWidth=2;verticalAlign=middle;align=center;" vertex="1" parent="1">
+      <mxGeometry x="1170" y="1020" width="940" height="88" as="geometry" />
+    </mxCell>
+    <mxCell id="43" value="&lt;font style=&quot;font-size:40px;&quot;&gt;&lt;b&gt;PK&lt;/b&gt;  id&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;UUID&lt;br/&gt;event_type&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;TEXT&lt;br/&gt;confidence&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;FLOAT&lt;br/&gt;camera_id&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;TEXT&lt;br/&gt;timestamp&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;TIMESTAMPTZ&lt;br/&gt;image_b64&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;TEXT&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#EBF0FA;strokeColor=#23395d;strokeWidth=2;verticalAlign=top;align=left;spacingLeft=22;spacingTop=14;overflow=hidden;" vertex="1" parent="1">
+      <mxGeometry x="1170" y="1108" width="940" height="410" as="geometry" />
+    </mxCell>
+
+    <!-- ═══════════════════════════════════════════════════════
+         VIOLENCE_EVENTS  (left column, row 3)
+         ─ 5 rows → height 350
+    ═══════════════════════════════════════════════════════ -->
+    <mxCell id="50" value="&lt;font style=&quot;font-size:45px;&quot;&gt;&lt;b&gt;VIOLENCE_EVENTS&lt;/b&gt;&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#b85450;fontColor=#FFFFFF;strokeColor=#8a3a37;strokeWidth=2;verticalAlign=middle;align=center;" vertex="1" parent="1">
+      <mxGeometry x="90" y="1700" width="920" height="88" as="geometry" />
+    </mxCell>
+    <mxCell id="51" value="&lt;font style=&quot;font-size:40px;&quot;&gt;&lt;b&gt;PK&lt;/b&gt;  id&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;UUID&lt;br/&gt;confidence&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;FLOAT&lt;br/&gt;camera_id&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;TEXT&lt;br/&gt;timestamp&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;TIMESTAMPTZ&lt;br/&gt;image_b64&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;TEXT&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fde8e8;strokeColor=#b85450;strokeWidth=2;verticalAlign=top;align=left;spacingLeft=22;spacingTop=14;overflow=hidden;" vertex="1" parent="1">
+      <mxGeometry x="90" y="1788" width="920" height="350" as="geometry" />
+    </mxCell>
+
+    <!-- ═══════════════════════════════════════════════════════
+         ACCIDENTS  (right column, row 3)
+         ─ 6 rows → height 410
+    ═══════════════════════════════════════════════════════ -->
+    <mxCell id="52" value="&lt;font style=&quot;font-size:45px;&quot;&gt;&lt;b&gt;ACCIDENTS&lt;/b&gt;&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#b85450;fontColor=#FFFFFF;strokeColor=#8a3a37;strokeWidth=2;verticalAlign=middle;align=center;" vertex="1" parent="1">
+      <mxGeometry x="1170" y="1700" width="940" height="88" as="geometry" />
+    </mxCell>
+    <mxCell id="53" value="&lt;font style=&quot;font-size:40px;&quot;&gt;&lt;b&gt;PK&lt;/b&gt;  id&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;UUID&lt;br/&gt;confidence&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;FLOAT&lt;br/&gt;camera_id&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;TEXT&lt;br/&gt;timestamp&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;TIMESTAMPTZ&lt;br/&gt;video_clip_url&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;TEXT&lt;br/&gt;image_b64&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;TEXT&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fde8e8;strokeColor=#b85450;strokeWidth=2;verticalAlign=top;align=left;spacingLeft=22;spacingTop=14;overflow=hidden;" vertex="1" parent="1">
+      <mxGeometry x="1170" y="1788" width="940" height="410" as="geometry" />
+    </mxCell>
+
+    <!-- ═══════════════════════════════════════════════════════
+         KNIFE_EVENTS  (left column, row 4)
+         ─ 5 rows → height 350
+    ═══════════════════════════════════════════════════════ -->
+    <mxCell id="60" value="&lt;font style=&quot;font-size:45px;&quot;&gt;&lt;b&gt;KNIFE_EVENTS&lt;/b&gt;&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#5a0ea0;fontColor=#FFFFFF;strokeColor=#3d0070;strokeWidth=2;verticalAlign=middle;align=center;" vertex="1" parent="1">
+      <mxGeometry x="90" y="2320" width="920" height="88" as="geometry" />
+    </mxCell>
+    <mxCell id="61" value="&lt;font style=&quot;font-size:40px;&quot;&gt;&lt;b&gt;PK&lt;/b&gt;  id&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;UUID&lt;br/&gt;confidence&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;FLOAT&lt;br/&gt;camera_id&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;TEXT&lt;br/&gt;timestamp&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;TIMESTAMPTZ&lt;br/&gt;image_b64&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;TEXT&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f3e8ff;strokeColor=#5a0ea0;strokeWidth=2;verticalAlign=top;align=left;spacingLeft=22;spacingTop=14;overflow=hidden;" vertex="1" parent="1">
+      <mxGeometry x="90" y="2408" width="920" height="350" as="geometry" />
+    </mxCell>
+
+    <!-- ═══════════════════════════════════════════════════════
+         WEAPON_EVENTS  (right column, row 4)
+         ─ 5 rows → height 350
+    ═══════════════════════════════════════════════════════ -->
+    <mxCell id="62" value="&lt;font style=&quot;font-size:45px;&quot;&gt;&lt;b&gt;WEAPON_EVENTS&lt;/b&gt;&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#5a0ea0;fontColor=#FFFFFF;strokeColor=#3d0070;strokeWidth=2;verticalAlign=middle;align=center;" vertex="1" parent="1">
+      <mxGeometry x="1170" y="2320" width="940" height="88" as="geometry" />
+    </mxCell>
+    <mxCell id="63" value="&lt;font style=&quot;font-size:40px;&quot;&gt;&lt;b&gt;PK&lt;/b&gt;  id&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;UUID&lt;br/&gt;confidence&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;FLOAT&lt;br/&gt;camera_id&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;TEXT&lt;br/&gt;timestamp&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;TIMESTAMPTZ&lt;br/&gt;image_b64&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;TEXT&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f3e8ff;strokeColor=#5a0ea0;strokeWidth=2;verticalAlign=top;align=left;spacingLeft=22;spacingTop=14;overflow=hidden;" vertex="1" parent="1">
+      <mxGeometry x="1170" y="2408" width="940" height="350" as="geometry" />
+    </mxCell>
+
+    <!-- Footer note -->
+    <mxCell id="70" value="&lt;font style=&quot;font-size:38px;color:#555555;&quot;&gt;Event tables are independent logs — no foreign keys shown.&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;" vertex="1" parent="1">
+      <mxGeometry x="90" y="2810" width="1900" height="58" as="geometry" />
+    </mxCell>
+
+  </root>
+</mxGraphModel>

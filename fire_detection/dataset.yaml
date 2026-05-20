@@ -1,0 +1,7 @@
+path: .
+train: fire_detection/splits/train.txt
+val: fire_detection/splits/val.txt
+
+nc: 3
+names: [fire, other, smoke]
+

@@ -1,0 +1,118 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="Worker State Machine" id="wsm-1">
+    <mxGraphModel dx="1600" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="2600" pageHeight="3200" math="0" shadow="0">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+
+        <!-- ============================================================
+             OUTER BORDER + TITLE
+        ============================================================ -->
+        <mxCell id="border" value="&lt;font style=&quot;font-size:45px;&quot;&gt;&lt;b&gt;WORKER STATE MACHINE&lt;/b&gt;&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f9f9f9;strokeColor=#102A6B;strokeWidth=4;verticalAlign=top;align=center;spacingTop=25;" vertex="1" parent="1">
+          <mxGeometry x="40" y="40" width="2520" height="3100" as="geometry"/>
+        </mxCell>
+
+        <!-- ============================================================
+             STATE: CREATED  (top)
+        ============================================================ -->
+        <mxCell id="created" value="&lt;font style=&quot;font-size:45px;&quot;&gt;&lt;b&gt;CREATED&lt;/b&gt;&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;strokeWidth=3;strokeColor=#1B3A6B;fillColor=#D6DDEF;shadow=1;arcSize=12;verticalAlign=middle;align=center;" vertex="1" parent="1">
+          <mxGeometry x="900" y="180" width="800" height="120" as="geometry"/>
+        </mxCell>
+
+        <!-- Arrow: CREATED → STARTING  (POST /start) -->
+        <mxCell id="a-created-starting" style="rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=3;strokeColor=#1B3A6B;endArrow=classic;endFill=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="created" target="starting">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="lbl-post-start1" value="&lt;font style=&quot;font-size:40px;&quot;&gt;&lt;b&gt;POST /start&lt;/b&gt;&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontColor=#E94560;" vertex="1" parent="1">
+          <mxGeometry x="1340" y="350" width="440" height="60" as="geometry"/>
+        </mxCell>
+
+        <!-- ============================================================
+             STATE: STARTING
+        ============================================================ -->
+        <mxCell id="starting" value="&lt;font style=&quot;font-size:45px;&quot;&gt;&lt;b&gt;STARTING&lt;/b&gt;&lt;/font&gt;&lt;br/&gt;&lt;font style=&quot;font-size:40px;&quot;&gt;(init RTSP capture,&lt;br/&gt;load model to GPU)&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;strokeWidth=3;strokeColor=#1B3A6B;fillColor=#E4EAF5;shadow=1;arcSize=10;verticalAlign=middle;align=center;spacingTop=10;spacingBottom=10;" vertex="1" parent="1">
+          <mxGeometry x="800" y="460" width="1000" height="250" as="geometry"/>
+        </mxCell>
+
+        <!-- Arrow: STARTING → RUNNING  (success) -->
+        <mxCell id="a-starting-running" style="rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=3;strokeColor=#2E7D32;endArrow=classic;endFill=1;exitX=0.25;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="starting" target="running">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="lbl-success" value="&lt;font style=&quot;font-size:40px;&quot; color=&quot;#2E7D32&quot;&gt;&lt;b&gt;success&lt;/b&gt;&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="580" y="770" width="320" height="60" as="geometry"/>
+        </mxCell>
+
+        <!-- Arrow: STARTING → ERROR  (error) -->
+        <mxCell id="a-starting-error" style="rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=3;strokeColor=#C62828;endArrow=classic;endFill=1;exitX=0.75;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="starting" target="error">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="lbl-error" value="&lt;font style=&quot;font-size:40px;&quot; color=&quot;#C62828&quot;&gt;&lt;b&gt;error&lt;/b&gt;&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="1700" y="770" width="200" height="60" as="geometry"/>
+        </mxCell>
+
+        <!-- ============================================================
+             STATE: RUNNING  (left branch)
+        ============================================================ -->
+        <mxCell id="running" value="&lt;font style=&quot;font-size:45px;&quot;&gt;&lt;b&gt;RUNNING&lt;/b&gt;&lt;/font&gt;&lt;br/&gt;&lt;font style=&quot;font-size:40px;&quot;&gt;(captures frames,&lt;br/&gt;runs inference,&lt;br/&gt;posts results)&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;strokeWidth=3;strokeColor=#2E7D32;fillColor=#E8F5E9;shadow=1;arcSize=10;verticalAlign=middle;align=center;spacingTop=10;spacingBottom=10;" vertex="1" parent="1">
+          <mxGeometry x="240" y="900" width="900" height="300" as="geometry"/>
+        </mxCell>
+
+        <!-- ============================================================
+             STATE: ERROR  (right branch)
+        ============================================================ -->
+        <mxCell id="error" value="&lt;font style=&quot;font-size:45px;&quot;&gt;&lt;b&gt;ERROR&lt;/b&gt;&lt;/font&gt;&lt;br/&gt;&lt;font style=&quot;font-size:40px;&quot;&gt;(logs error,&lt;br/&gt;sets stale flag)&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;strokeWidth=3;strokeColor=#C62828;fillColor=#FFEBEE;shadow=1;arcSize=10;verticalAlign=middle;align=center;spacingTop=10;spacingBottom=10;" vertex="1" parent="1">
+          <mxGeometry x="1460" y="900" width="900" height="300" as="geometry"/>
+        </mxCell>
+
+        <!-- Arrow: RUNNING → STOPPING  (POST /stop) -->
+        <mxCell id="a-running-stopping" style="rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=3;strokeColor=#1B3A6B;endArrow=classic;endFill=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="running" target="stopping">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="lbl-post-stop" value="&lt;font style=&quot;font-size:40px;&quot;&gt;&lt;b&gt;POST /stop&lt;/b&gt;&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontColor=#E94560;" vertex="1" parent="1">
+          <mxGeometry x="340" y="1260" width="400" height="60" as="geometry"/>
+        </mxCell>
+
+        <!-- Arrow: ERROR → STOPPING  (auto-retry or /stop) -->
+        <mxCell id="a-error-stopping" style="rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=3;strokeColor=#C62828;dashed=1;dashPattern=8 4;endArrow=classic;endFill=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="error" target="stopping">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="lbl-retry" value="&lt;font style=&quot;font-size:40px;&quot;&gt;&lt;b&gt;auto-retry or&lt;br/&gt;/stop endpoint&lt;/b&gt;&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontColor=#C62828;" vertex="1" parent="1">
+          <mxGeometry x="1700" y="1260" width="500" height="120" as="geometry"/>
+        </mxCell>
+
+        <!-- ============================================================
+             STATE: STOPPING
+        ============================================================ -->
+        <mxCell id="stopping" value="&lt;font style=&quot;font-size:45px;&quot;&gt;&lt;b&gt;STOPPING&lt;/b&gt;&lt;/font&gt;&lt;br/&gt;&lt;font style=&quot;font-size:40px;&quot;&gt;(releases capture,&lt;br/&gt;cleans threads)&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;strokeWidth=3;strokeColor=#E65100;fillColor=#FFF3E0;shadow=1;arcSize=10;verticalAlign=middle;align=center;spacingTop=10;spacingBottom=10;" vertex="1" parent="1">
+          <mxGeometry x="700" y="1500" width="1200" height="260" as="geometry"/>
+        </mxCell>
+
+        <!-- Arrow: STOPPING → STOPPED -->
+        <mxCell id="a-stopping-stopped" style="rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=3;strokeColor=#1B3A6B;endArrow=classic;endFill=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="stopping" target="stopped">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <!-- ============================================================
+             STATE: STOPPED
+        ============================================================ -->
+        <mxCell id="stopped" value="&lt;font style=&quot;font-size:45px;&quot;&gt;&lt;b&gt;STOPPED&lt;/b&gt;&lt;/font&gt;&lt;br/&gt;&lt;font style=&quot;font-size:40px;&quot;&gt;(idle, no threads)&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;strokeWidth=3;strokeColor=#1B3A6B;fillColor=#D6DDEF;shadow=1;arcSize=10;verticalAlign=middle;align=center;spacingTop=10;spacingBottom=10;" vertex="1" parent="1">
+          <mxGeometry x="800" y="1920" width="1000" height="220" as="geometry"/>
+        </mxCell>
+
+        <!-- Arrow: STOPPED → STARTING  (POST /start — loop back) -->
+        <mxCell id="a-stopped-starting" style="rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=3;strokeColor=#E94560;dashed=1;dashPattern=8 4;endArrow=classic;endFill=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="stopped" target="starting">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="200" y="2030"/>
+              <mxPoint x="200" y="585"/>
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="lbl-post-start2" value="&lt;font style=&quot;font-size:40px;&quot;&gt;&lt;b&gt;POST /start&lt;/b&gt;&lt;br/&gt;(loop)&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontColor=#E94560;" vertex="1" parent="1">
+          <mxGeometry x="100" y="2160" width="440" height="120" as="geometry"/>
+        </mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

@@ -1,0 +1,380 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mxGraphModel dx="1422" dy="762" grid="1" gridSize="10" guides="1" tooltips="1"
+  connect="1" arrows="1" fold="1" page="1" pageScale="1"
+  pageWidth="2400" pageHeight="1900" math="0" shadow="0">
+  <root>
+    <mxCell id="0" />
+    <mxCell id="1" parent="0" />
+
+    <!-- ═══════════════════════════════════════════════════════
+         SYSTEM BOUNDARY
+    ══════════════════════════════════════════════════════════ -->
+    <mxCell id="2"
+      value="&lt;font style=&quot;font-size:45px;&quot;&gt;&lt;b&gt;FACE RECOGNITION MODULE&lt;/b&gt;&lt;/font&gt;"
+      style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f9ff;strokeColor=#102A6B;strokeWidth=4;
+             verticalAlign=top;align=center;spacingTop=18;"
+      vertex="1" parent="1">
+      <mxGeometry x="280" y="50" width="1700" height="1560" as="geometry" />
+    </mxCell>
+
+    <!-- ──────────────────────────────────────────────────────
+         GROUP LABELS (section headers inside boundary)
+    ─────────────────────────────────────────────────────────── -->
+    <!-- Enrolment Flow label -->
+    <mxCell id="50"
+      value="&lt;font style=&quot;font-size:34px;color:#1A479A;&quot;&gt;&lt;b&gt;— Enrolment Flow —&lt;/b&gt;&lt;/font&gt;"
+      style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;"
+      vertex="1" parent="1">
+      <mxGeometry x="310" y="155" width="480" height="48" as="geometry" />
+    </mxCell>
+
+    <!-- Recognition Flow label -->
+    <mxCell id="51"
+      value="&lt;font style=&quot;font-size:34px;color:#2E7D32;&quot;&gt;&lt;b&gt;— Recognition Flow —&lt;/b&gt;&lt;/font&gt;"
+      style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;"
+      vertex="1" parent="1">
+      <mxGeometry x="310" y="490" width="520" height="48" as="geometry" />
+    </mxCell>
+
+    <!-- Management Flow label -->
+    <mxCell id="52"
+      value="&lt;font style=&quot;font-size:34px;color:#7B4800;&quot;&gt;&lt;b&gt;— Identity Management —&lt;/b&gt;&lt;/font&gt;"
+      style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;"
+      vertex="1" parent="1">
+      <mxGeometry x="310" y="920" width="620" height="48" as="geometry" />
+    </mxCell>
+
+    <!-- ──────────────────────────────────────────────────────
+         LEFT COLUMN — MAIN USE CASES
+    ─────────────────────────────────────────────────────────── -->
+
+    <!-- UC-FR-01: Enrol Person  (blue) -->
+    <mxCell id="4"
+      value="&lt;font style=&quot;font-size:40px;&quot;&gt;UC-FR-01: Enrol Person&lt;/font&gt;"
+      style="ellipse;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;strokeWidth=2;"
+      vertex="1" parent="1">
+      <mxGeometry x="310" y="215" width="720" height="115" as="geometry" />
+    </mxCell>
+
+    <!-- UC-FR-04: Perform Live Recognition (RTSP)  (green) -->
+    <mxCell id="7"
+      value="&lt;font style=&quot;font-size:40px;&quot;&gt;UC-FR-04: Perform Live Recognition (RTSP)&lt;/font&gt;"
+      style="ellipse;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;strokeWidth=2;"
+      vertex="1" parent="1">
+      <mxGeometry x="310" y="545" width="720" height="115" as="geometry" />
+    </mxCell>
+
+    <!-- UC-FR-08: Recognise from Webcam Frame  (green lighter) -->
+    <mxCell id="11"
+      value="&lt;font style=&quot;font-size:40px;&quot;&gt;UC-FR-08: Recognise from Webcam Frame&lt;/font&gt;"
+      style="ellipse;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;strokeWidth=2;"
+      vertex="1" parent="1">
+      <mxGeometry x="310" y="710" width="720" height="115" as="geometry" />
+    </mxCell>
+
+    <!-- UC-FR-09: Update Person Tags  (yellow) -->
+    <mxCell id="12"
+      value="&lt;font style=&quot;font-size:40px;&quot;&gt;UC-FR-09: Update Person Tags&lt;/font&gt;"
+      style="ellipse;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;strokeWidth=2;"
+      vertex="1" parent="1">
+      <mxGeometry x="310" y="980" width="720" height="115" as="geometry" />
+    </mxCell>
+
+    <!-- UC-FR-10: Delete Person + Embedding  (yellow) -->
+    <mxCell id="13"
+      value="&lt;font style=&quot;font-size:40px;&quot;&gt;UC-FR-10: Delete Person + Embedding&lt;/font&gt;"
+      style="ellipse;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;strokeWidth=2;"
+      vertex="1" parent="1">
+      <mxGeometry x="310" y="1140" width="720" height="115" as="geometry" />
+    </mxCell>
+
+    <!-- UC-FR-11: View Sticky Recognition Gallery  (yellow) -->
+    <mxCell id="14"
+      value="&lt;font style=&quot;font-size:40px;&quot;&gt;UC-FR-11: View Sticky Recognition Gallery&lt;/font&gt;"
+      style="ellipse;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;strokeWidth=2;"
+      vertex="1" parent="1">
+      <mxGeometry x="310" y="1300" width="720" height="115" as="geometry" />
+    </mxCell>
+
+    <!-- UC-FR-12: Clear Recognition History  (yellow) -->
+    <mxCell id="15"
+      value="&lt;font style=&quot;font-size:40px;&quot;&gt;UC-FR-12: Clear Recognition History&lt;/font&gt;"
+      style="ellipse;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;strokeWidth=2;"
+      vertex="1" parent="1">
+      <mxGeometry x="310" y="1460" width="720" height="115" as="geometry" />
+    </mxCell>
+
+    <!-- ──────────────────────────────────────────────────────
+         RIGHT COLUMN — SUB / INCLUDED USE CASES
+    ─────────────────────────────────────────────────────────── -->
+
+    <!-- Sub-UCs label -->
+    <mxCell id="53"
+      value="&lt;font style=&quot;font-size:32px;color:#555;&quot;&gt;&lt;i&gt;Included Use Cases&lt;/i&gt;&lt;/font&gt;"
+      style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;"
+      vertex="1" parent="1">
+      <mxGeometry x="1220" y="110" width="700" height="44" as="geometry" />
+    </mxCell>
+
+    <!-- Vertical separator line -->
+    <mxCell id="54"
+      value=""
+      style="line;strokeWidth=2;strokeColor=#AAAAAA;dashed=1;dashPattern=6 4;html=1;fillColor=none;"
+      vertex="1" parent="1">
+      <mxGeometry x="1110" y="160" width="10" height="1380" as="geometry" />
+    </mxCell>
+
+    <!-- UC-FR-02: Extract Face Embedding  (blue) -->
+    <mxCell id="5"
+      value="&lt;font style=&quot;font-size:40px;&quot;&gt;UC-FR-02: Extract Face Embedding&lt;/font&gt;"
+      style="ellipse;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;strokeWidth=2;"
+      vertex="1" parent="1">
+      <mxGeometry x="1220" y="185" width="720" height="115" as="geometry" />
+    </mxCell>
+
+    <!-- UC-FR-03: Store in Database  (blue) -->
+    <mxCell id="6"
+      value="&lt;font style=&quot;font-size:40px;&quot;&gt;UC-FR-03: Store in Database&lt;/font&gt;"
+      style="ellipse;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;strokeWidth=2;"
+      vertex="1" parent="1">
+      <mxGeometry x="1220" y="340" width="720" height="115" as="geometry" />
+    </mxCell>
+
+    <!-- UC-FR-05: Detect Faces in Frame  (green) -->
+    <mxCell id="8"
+      value="&lt;font style=&quot;font-size:40px;&quot;&gt;UC-FR-05: Detect Faces in Frame&lt;/font&gt;"
+      style="ellipse;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;strokeWidth=2;"
+      vertex="1" parent="1">
+      <mxGeometry x="1220" y="510" width="720" height="115" as="geometry" />
+    </mxCell>
+
+    <!-- UC-FR-06: Compare Embeddings  (green) -->
+    <mxCell id="9"
+      value="&lt;font style=&quot;font-size:40px;&quot;&gt;UC-FR-06: Compare Embeddings&lt;/font&gt;"
+      style="ellipse;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;strokeWidth=2;"
+      vertex="1" parent="1">
+      <mxGeometry x="1220" y="670" width="720" height="115" as="geometry" />
+    </mxCell>
+
+    <!-- UC-FR-07: Return Match with Box  (green) -->
+    <mxCell id="10"
+      value="&lt;font style=&quot;font-size:40px;&quot;&gt;UC-FR-07: Return Match with Box&lt;/font&gt;"
+      style="ellipse;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;strokeWidth=2;"
+      vertex="1" parent="1">
+      <mxGeometry x="1220" y="830" width="720" height="115" as="geometry" />
+    </mxCell>
+
+    <!-- ═══════════════════════════════════════════════════════
+         ACTORS  (outside boundary, left side)
+    ══════════════════════════════════════════════════════════ -->
+
+    <!-- System Admin -->
+    <mxCell id="17"
+      value="&lt;font style=&quot;font-size:40px;&quot;&gt;&lt;b&gt;System&lt;br/&gt;Admin&lt;/b&gt;&lt;/font&gt;"
+      style="shape=mxgraph.uml.actor2;whiteSpace=wrap;html=1;
+             fillColor=#102A6B;strokeColor=#102A6B;fontColor=#102A6B;
+             verticalLabelPosition=bottom;verticalAlign=top;align=center;"
+      vertex="1" parent="1">
+      <mxGeometry x="70" y="245" width="160" height="210" as="geometry" />
+    </mxCell>
+
+    <!-- IP Camera / RTSP -->
+    <mxCell id="18"
+      value="&lt;font style=&quot;font-size:40px;&quot;&gt;&lt;b&gt;IP Camera&lt;br/&gt;/ RTSP&lt;/b&gt;&lt;/font&gt;"
+      style="shape=mxgraph.uml.actor2;whiteSpace=wrap;html=1;
+             fillColor=#6c8ebf;strokeColor=#6c8ebf;fontColor=#6c8ebf;
+             verticalLabelPosition=bottom;verticalAlign=top;align=center;"
+      vertex="1" parent="1">
+      <mxGeometry x="70" y="580" width="160" height="210" as="geometry" />
+    </mxCell>
+
+    <!-- Operator -->
+    <mxCell id="16"
+      value="&lt;font style=&quot;font-size:40px;&quot;&gt;&lt;b&gt;Operator&lt;/b&gt;&lt;/font&gt;"
+      style="shape=mxgraph.uml.actor2;whiteSpace=wrap;html=1;
+             fillColor=#1A479A;strokeColor=#1A479A;fontColor=#1A479A;
+             verticalLabelPosition=bottom;verticalAlign=top;align=center;"
+      vertex="1" parent="1">
+      <mxGeometry x="70" y="1020" width="160" height="210" as="geometry" />
+    </mxCell>
+
+    <!-- ═══════════════════════════════════════════════════════
+         <<includes>> EDGES  (dashed, open arrowhead → included UC)
+    ══════════════════════════════════════════════════════════ -->
+
+    <!-- UC-FR-01 ──<<includes>>──► UC-FR-02 -->
+    <mxCell id="19"
+      value="&lt;font style=&quot;font-size:30px;&quot;&gt;&amp;lt;&amp;lt;includes&amp;gt;&amp;gt;&lt;/font&gt;"
+      style="edgeStyle=orthogonalEdgeStyle;html=1;dashed=1;dashPattern=8 4;
+             endArrow=open;endFill=0;strokeColor=#6c8ebf;strokeWidth=2;
+             exitX=1;exitY=0.35;exitDx=0;exitDy=0;
+             entryX=0;entryY=0.5;entryDx=0;entryDy=0;"
+      edge="1" source="4" target="5" parent="1">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+
+    <!-- UC-FR-01 ──<<includes>>──► UC-FR-03 -->
+    <mxCell id="20"
+      value="&lt;font style=&quot;font-size:30px;&quot;&gt;&amp;lt;&amp;lt;includes&amp;gt;&amp;gt;&lt;/font&gt;"
+      style="edgeStyle=orthogonalEdgeStyle;html=1;dashed=1;dashPattern=8 4;
+             endArrow=open;endFill=0;strokeColor=#6c8ebf;strokeWidth=2;
+             exitX=1;exitY=0.65;exitDx=0;exitDy=0;
+             entryX=0;entryY=0.5;entryDx=0;entryDy=0;"
+      edge="1" source="4" target="6" parent="1">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+
+    <!-- UC-FR-04 ──<<includes>>──► UC-FR-05 -->
+    <mxCell id="21"
+      value="&lt;font style=&quot;font-size:30px;&quot;&gt;&amp;lt;&amp;lt;includes&amp;gt;&amp;gt;&lt;/font&gt;"
+      style="edgeStyle=orthogonalEdgeStyle;html=1;dashed=1;dashPattern=8 4;
+             endArrow=open;endFill=0;strokeColor=#82b366;strokeWidth=2;
+             exitX=1;exitY=0.3;exitDx=0;exitDy=0;
+             entryX=0;entryY=0.5;entryDx=0;entryDy=0;"
+      edge="1" source="7" target="8" parent="1">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+
+    <!-- UC-FR-04 ──<<includes>>──► UC-FR-06 -->
+    <mxCell id="22"
+      value="&lt;font style=&quot;font-size:30px;&quot;&gt;&amp;lt;&amp;lt;includes&amp;gt;&amp;gt;&lt;/font&gt;"
+      style="edgeStyle=orthogonalEdgeStyle;html=1;dashed=1;dashPattern=8 4;
+             endArrow=open;endFill=0;strokeColor=#82b366;strokeWidth=2;
+             exitX=1;exitY=0.5;exitDx=0;exitDy=0;
+             entryX=0;entryY=0.5;entryDx=0;entryDy=0;"
+      edge="1" source="7" target="9" parent="1">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+
+    <!-- UC-FR-04 ──<<includes>>──► UC-FR-07 -->
+    <mxCell id="23"
+      value="&lt;font style=&quot;font-size:30px;&quot;&gt;&amp;lt;&amp;lt;includes&amp;gt;&amp;gt;&lt;/font&gt;"
+      style="edgeStyle=orthogonalEdgeStyle;html=1;dashed=1;dashPattern=8 4;
+             endArrow=open;endFill=0;strokeColor=#82b366;strokeWidth=2;
+             exitX=1;exitY=0.7;exitDx=0;exitDy=0;
+             entryX=0;entryY=0.5;entryDx=0;entryDy=0;"
+      edge="1" source="7" target="10" parent="1">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+
+    <!-- ═══════════════════════════════════════════════════════
+         <<extends>> EDGE
+         UC-FR-08 ──<<extends>>──► UC-FR-04
+    ══════════════════════════════════════════════════════════ -->
+    <mxCell id="24"
+      value="&lt;font style=&quot;font-size:30px;&quot;&gt;&amp;lt;&amp;lt;extends&amp;gt;&amp;gt;&lt;/font&gt;"
+      style="edgeStyle=orthogonalEdgeStyle;html=1;dashed=1;dashPattern=8 4;
+             endArrow=open;endFill=0;strokeColor=#E65100;strokeWidth=2;
+             exitX=0.5;exitY=0;exitDx=0;exitDy=0;
+             entryX=0.5;entryY=1;entryDx=0;entryDy=0;"
+      edge="1" source="11" target="7" parent="1">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+
+    <!-- ═══════════════════════════════════════════════════════
+         ACTOR → USE CASE  (solid lines, no arrowhead)
+    ══════════════════════════════════════════════════════════ -->
+
+    <!-- System Admin → UC-FR-01 -->
+    <mxCell id="25" value=""
+      style="endArrow=none;html=1;strokeWidth=2;strokeColor=#102A6B;
+             exitX=1;exitY=0.5;exitDx=0;exitDy=0;
+             entryX=0;entryY=0.5;entryDx=0;entryDy=0;"
+      edge="1" source="17" target="4" parent="1">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+
+    <!-- System Admin → UC-FR-10 -->
+    <mxCell id="26" value=""
+      style="endArrow=none;html=1;strokeWidth=2;strokeColor=#102A6B;
+             exitX=1;exitY=0.7;exitDx=0;exitDy=0;"
+      edge="1" source="17" target="13" parent="1">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+
+    <!-- System Admin → UC-FR-09 -->
+    <mxCell id="27" value=""
+      style="endArrow=none;html=1;strokeWidth=2;strokeColor=#102A6B;"
+      edge="1" source="17" target="12" parent="1">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+
+    <!-- IP Camera → UC-FR-04 -->
+    <mxCell id="33" value=""
+      style="endArrow=none;html=1;strokeWidth=2;strokeColor=#6c8ebf;
+             exitX=1;exitY=0.5;exitDx=0;exitDy=0;
+             entryX=0;entryY=0.5;entryDx=0;entryDy=0;"
+      edge="1" source="18" target="7" parent="1">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+
+    <!-- IP Camera → UC-FR-08 -->
+    <mxCell id="34" value=""
+      style="endArrow=none;html=1;strokeWidth=2;strokeColor=#6c8ebf;
+             exitX=1;exitY=0.7;exitDx=0;exitDy=0;
+             entryX=0;entryY=0.5;entryDx=0;entryDy=0;"
+      edge="1" source="18" target="11" parent="1">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+
+    <!-- Operator → UC-FR-01 -->
+    <mxCell id="28" value=""
+      style="endArrow=none;html=1;strokeWidth=2;strokeColor=#1A479A;
+             exitX=1;exitY=0.3;exitDx=0;exitDy=0;
+             entryX=0;entryY=0.7;entryDx=0;entryDy=0;"
+      edge="1" source="16" target="4" parent="1">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+
+    <!-- Operator → UC-FR-08 -->
+    <mxCell id="29" value=""
+      style="endArrow=none;html=1;strokeWidth=2;strokeColor=#1A479A;
+             exitX=1;exitY=0.4;exitDx=0;exitDy=0;
+             entryX=0;entryY=0.7;entryDx=0;entryDy=0;"
+      edge="1" source="16" target="11" parent="1">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+
+    <!-- Operator → UC-FR-09 -->
+    <mxCell id="30" value=""
+      style="endArrow=none;html=1;strokeWidth=2;strokeColor=#1A479A;
+             exitX=1;exitY=0.5;exitDx=0;exitDy=0;
+             entryX=0;entryY=0.5;entryDx=0;entryDy=0;"
+      edge="1" source="16" target="12" parent="1">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+
+    <!-- Operator → UC-FR-11 -->
+    <mxCell id="31" value=""
+      style="endArrow=none;html=1;strokeWidth=2;strokeColor=#1A479A;
+             exitX=1;exitY=0.65;exitDx=0;exitDy=0;
+             entryX=0;entryY=0.5;entryDx=0;entryDy=0;"
+      edge="1" source="16" target="14" parent="1">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+
+    <!-- Operator → UC-FR-12 -->
+    <mxCell id="32" value=""
+      style="endArrow=none;html=1;strokeWidth=2;strokeColor=#1A479A;
+             exitX=1;exitY=0.8;exitDx=0;exitDy=0;
+             entryX=0;entryY=0.5;entryDx=0;entryDy=0;"
+      edge="1" source="16" target="15" parent="1">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+
+    <!-- ═══════════════════════════════════════════════════════
+         LEGEND
+    ══════════════════════════════════════════════════════════ -->
+    <mxCell id="60"
+      value="&lt;font style=&quot;font-size:34px;&quot;&gt;&lt;b&gt;Legend&lt;/b&gt;&lt;br/&gt;
+&#x2015;&#x2015; &amp;nbsp; Actor association&lt;br/&gt;
+- - ► &amp;nbsp; &amp;lt;&amp;lt;includes&amp;gt;&amp;gt;&lt;br/&gt;
+- - ► &amp;nbsp; &amp;lt;&amp;lt;extends&amp;gt;&amp;gt;&lt;/font&gt;"
+      style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;
+             strokeWidth=2;align=left;spacingLeft=14;verticalAlign=middle;"
+      vertex="1" parent="1">
+      <mxGeometry x="1560" y="1300" width="400" height="270" as="geometry" />
+    </mxCell>
+
+  </root>
+</mxGraphModel>

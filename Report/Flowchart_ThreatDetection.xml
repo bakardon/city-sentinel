@@ -1,0 +1,451 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mxGraphModel dx="1422" dy="762" grid="1" gridSize="10" guides="1" tooltips="1"
+  connect="1" arrows="1" fold="1" page="1" pageScale="1"
+  pageWidth="2100" pageHeight="3750" math="0" shadow="0">
+  <root>
+    <mxCell id="0" />
+    <mxCell id="1" parent="0" />
+
+    <!-- ═══════════════════════════════════════════════════════
+         OUTER BOUNDARY
+         Main-flow centre x = 900  |  Left-branch centre x = 330
+         Right-branch centre x = 1490
+    ══════════════════════════════════════════════════════════ -->
+    <mxCell id="2"
+      value="&lt;font style=&quot;font-size:45px;&quot;&gt;&lt;b&gt;THREAT DETECTION WORKFLOW&lt;/b&gt;&lt;/font&gt;"
+      style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f9f9f9;strokeColor=#102A6B;
+             strokeWidth=4;verticalAlign=top;align=center;spacingTop=18;"
+      vertex="1" parent="1">
+      <mxGeometry x="50" y="50" width="1980" height="3640" as="geometry" />
+    </mxCell>
+
+    <!-- ═══════════════════════════════════════════════════════
+         START OVAL
+    ══════════════════════════════════════════════════════════ -->
+    <mxCell id="3"
+      value="&lt;font style=&quot;font-size:40px;&quot;&gt;&lt;b&gt;START&lt;/b&gt;&lt;/font&gt;"
+      style="ellipse;whiteSpace=wrap;html=1;fillColor=#1B3A6B;fontColor=#FFFFFF;
+             strokeColor=#0d2444;strokeWidth=2;"
+      vertex="1" parent="1">
+      <mxGeometry x="780" y="140" width="240" height="80" as="geometry" />
+    </mxCell>
+
+    <!-- ── System Startup ─────────────────────────────────── -->
+    <mxCell id="4"
+      value="&lt;font style=&quot;font-size:45px;&quot;&gt;&lt;b&gt;System Startup&lt;/b&gt;&lt;/font&gt;&lt;br/&gt;
+&lt;font style=&quot;font-size:40px;&quot;&gt;Load ML Models&lt;br/&gt;Connect Supabase&lt;/font&gt;"
+      style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1B3A6B;fontColor=#FFFFFF;
+             strokeColor=#0d2444;strokeWidth=2;verticalAlign=middle;align=center;
+             arcSize=6;spacingTop=8;"
+      vertex="1" parent="1">
+      <mxGeometry x="630" y="265" width="540" height="200" as="geometry" />
+    </mxCell>
+
+    <!-- ── RTSP Stream Worker ─────────────────────────────── -->
+    <mxCell id="5"
+      value="&lt;font style=&quot;font-size:45px;&quot;&gt;&lt;b&gt;RTSP Stream Worker&lt;/b&gt;&lt;/font&gt;&lt;br/&gt;
+&lt;font style=&quot;font-size:40px;&quot;&gt;Thread Started&lt;/font&gt;"
+      style="rounded=1;whiteSpace=wrap;html=1;fillColor=#23395d;fontColor=#FFFFFF;
+             strokeColor=#0d1f38;strokeWidth=2;verticalAlign=middle;align=center;
+             arcSize=6;spacingTop=8;"
+      vertex="1" parent="1">
+      <mxGeometry x="630" y="510" width="540" height="170" as="geometry" />
+    </mxCell>
+
+    <!-- ── Capture Frame ─────────────────────────────────── -->
+    <mxCell id="6"
+      value="&lt;font style=&quot;font-size:45px;&quot;&gt;&lt;b&gt;Capture Frame&lt;/b&gt;&lt;/font&gt;&lt;br/&gt;
+&lt;font style=&quot;font-size:40px;&quot;&gt;from RTSP Camera&lt;/font&gt;"
+      style="rounded=1;whiteSpace=wrap;html=1;fillColor=#23395d;fontColor=#FFFFFF;
+             strokeColor=#0d1f38;strokeWidth=2;verticalAlign=middle;align=center;
+             arcSize=6;spacingTop=8;"
+      vertex="1" parent="1">
+      <mxGeometry x="630" y="730" width="540" height="160" as="geometry" />
+    </mxCell>
+
+    <!-- ── Frame captured OK?  (diamond) ─────────────────── -->
+    <mxCell id="7"
+      value="&lt;font style=&quot;font-size:45px;&quot;&gt;&lt;b&gt;Frame captured OK?&lt;/b&gt;&lt;/font&gt;"
+      style="rhombus;whiteSpace=wrap;html=1;fillColor=#d79b00;fontColor=#FFFFFF;
+             strokeColor=#a07000;strokeWidth=2;verticalAlign=middle;align=center;"
+      vertex="1" parent="1">
+      <mxGeometry x="610" y="940" width="580" height="160" as="geometry" />
+    </mxCell>
+    <!-- diamond centre = (900, 1020)  left=(610,1020)  right=(1190,1020) -->
+
+    <!-- ═══════════════════════════════════════════════════════
+         LEFT BRANCH — Detection Pipeline
+    ══════════════════════════════════════════════════════════ -->
+
+    <!-- Pipeline background container -->
+    <mxCell id="8"
+      value="&lt;font style=&quot;font-size:45px;&quot;&gt;&lt;b&gt;Detection Pipeline&lt;/b&gt;&lt;/font&gt;&lt;br/&gt;
+&lt;font style=&quot;font-size:40px;&quot;&gt;(parallel threads)&lt;/font&gt;"
+      style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff7e6;strokeColor=#d6a800;
+             strokeWidth=2;verticalAlign=top;align=center;spacingTop=18;arcSize=4;"
+      vertex="1" parent="1">
+      <mxGeometry x="80" y="1160" width="520" height="830" as="geometry" />
+    </mxCell>
+
+    <!-- Face Detection sub-box -->
+    <mxCell id="9"
+      value="&lt;font style=&quot;font-size:45px;&quot;&gt;&lt;b&gt;Face Detection&lt;/b&gt;&lt;/font&gt;&lt;br/&gt;
+&lt;font style=&quot;font-size:40px;&quot;&gt;(RetinaFace)&lt;/font&gt;"
+      style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e65100;fontColor=#FFFFFF;
+             strokeColor=#b34500;strokeWidth=2;verticalAlign=middle;align=center;
+             arcSize=10;spacingTop=8;"
+      vertex="1" parent="1">
+      <mxGeometry x="110" y="1310" width="460" height="150" as="geometry" />
+    </mxCell>
+
+    <!-- Face Embedding sub-box -->
+    <mxCell id="10"
+      value="&lt;font style=&quot;font-size:45px;&quot;&gt;&lt;b&gt;Face Embedding&lt;/b&gt;&lt;/font&gt;&lt;br/&gt;
+&lt;font style=&quot;font-size:40px;&quot;&gt;(ArcFace)&lt;/font&gt;"
+      style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e65100;fontColor=#FFFFFF;
+             strokeColor=#b34500;strokeWidth=2;verticalAlign=middle;align=center;
+             arcSize=10;spacingTop=8;"
+      vertex="1" parent="1">
+      <mxGeometry x="110" y="1495" width="460" height="150" as="geometry" />
+    </mxCell>
+
+    <!-- Cosine Match sub-box -->
+    <mxCell id="11"
+      value="&lt;font style=&quot;font-size:45px;&quot;&gt;&lt;b&gt;Cosine Match&lt;/b&gt;&lt;/font&gt;&lt;br/&gt;
+&lt;font style=&quot;font-size:40px;&quot;&gt;vs People Cache&lt;/font&gt;"
+      style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e65100;fontColor=#FFFFFF;
+             strokeColor=#b34500;strokeWidth=2;verticalAlign=middle;align=center;
+             arcSize=10;spacingTop=8;"
+      vertex="1" parent="1">
+      <mxGeometry x="110" y="1680" width="460" height="150" as="geometry" />
+    </mxCell>
+
+    <!-- ANPR Detection sub-box -->
+    <mxCell id="12"
+      value="&lt;font style=&quot;font-size:45px;&quot;&gt;&lt;b&gt;ANPR Detection&lt;/b&gt;&lt;/font&gt;&lt;br/&gt;
+&lt;font style=&quot;font-size:40px;&quot;&gt;(YOLO + OCR)&lt;/font&gt;"
+      style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e65100;fontColor=#FFFFFF;
+             strokeColor=#b34500;strokeWidth=2;verticalAlign=middle;align=center;
+             arcSize=10;spacingTop=8;"
+      vertex="1" parent="1">
+      <mxGeometry x="110" y="1865" width="460" height="150" as="geometry" />
+    </mxCell>
+    <!-- ANPR bottom = 2015  |  Pipeline ends = 1990 → extend pipeline h to 865 -->
+
+    <!-- ═══════════════════════════════════════════════════════
+         RIGHT BRANCH — Log Error  (No frame)
+    ══════════════════════════════════════════════════════════ -->
+    <mxCell id="13"
+      value="&lt;font style=&quot;font-size:45px;&quot;&gt;&lt;b&gt;Log Error&lt;/b&gt;&lt;/font&gt;&lt;br/&gt;
+&lt;font style=&quot;font-size:40px;&quot;&gt;Set stale flag&lt;br/&gt;Return last frame&lt;/font&gt;"
+      style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;
+             strokeWidth=2;verticalAlign=middle;align=center;arcSize=8;spacingTop=8;"
+      vertex="1" parent="1">
+      <mxGeometry x="1250" y="1160" width="480" height="210" as="geometry" />
+    </mxCell>
+
+    <!-- ═══════════════════════════════════════════════════════
+         ANY THREAT DETECTED?  (diamond)
+         Placed after pipeline ends (ANPR bottom ≈ 2015)
+    ══════════════════════════════════════════════════════════ -->
+    <mxCell id="14"
+      value="&lt;font style=&quot;font-size:45px;&quot;&gt;&lt;b&gt;Any threat detected?&lt;/b&gt;&lt;/font&gt;"
+      style="rhombus;whiteSpace=wrap;html=1;fillColor=#d79b00;fontColor=#FFFFFF;
+             strokeColor=#a07000;strokeWidth=2;verticalAlign=middle;align=center;"
+      vertex="1" parent="1">
+      <mxGeometry x="610" y="2080" width="580" height="160" as="geometry" />
+    </mxCell>
+    <!-- centre = (900, 2160)  left=(610,2160)  right=(1190,2160) -->
+
+    <!-- ── Persist Event  (Yes / left) ──────────────────────── -->
+    <mxCell id="15"
+      value="&lt;font style=&quot;font-size:45px;&quot;&gt;&lt;b&gt;Persist Event&lt;/b&gt;&lt;/font&gt;&lt;br/&gt;
+&lt;font style=&quot;font-size:40px;&quot;&gt;to Supabase DB&lt;br/&gt;(async)&lt;/font&gt;"
+      style="rounded=1;whiteSpace=wrap;html=1;fillColor=#5a0ea0;fontColor=#FFFFFF;
+             strokeColor=#3d0070;strokeWidth=2;verticalAlign=middle;align=center;
+             arcSize=8;spacingTop=8;"
+      vertex="1" parent="1">
+      <mxGeometry x="80" y="2310" width="480" height="200" as="geometry" />
+    </mxCell>
+
+    <!-- ── Update Stream State  (No / right) ───────────────── -->
+    <mxCell id="16"
+      value="&lt;font style=&quot;font-size:45px;&quot;&gt;&lt;b&gt;Update latest_result&lt;/b&gt;&lt;/font&gt;&lt;br/&gt;
+&lt;font style=&quot;font-size:40px;&quot;&gt;in stream state&lt;/font&gt;"
+      style="rounded=1;whiteSpace=wrap;html=1;fillColor=#2D6A4F;fontColor=#FFFFFF;
+             strokeColor=#1b4232;strokeWidth=2;verticalAlign=middle;align=center;
+             arcSize=8;spacingTop=8;"
+      vertex="1" parent="1">
+      <mxGeometry x="1250" y="2310" width="480" height="170" as="geometry" />
+    </mxCell>
+
+    <!-- ── Encode Frame ──────────────────────────────────────── -->
+    <mxCell id="17"
+      value="&lt;font style=&quot;font-size:45px;&quot;&gt;&lt;b&gt;Encode Frame&lt;/b&gt;&lt;/font&gt;&lt;br/&gt;
+&lt;font style=&quot;font-size:40px;&quot;&gt;as base64 JPEG&lt;br/&gt;store → latest_image_b64&lt;/font&gt;"
+      style="rounded=1;whiteSpace=wrap;html=1;fillColor=#23395d;fontColor=#FFFFFF;
+             strokeColor=#0d1f38;strokeWidth=2;verticalAlign=middle;align=center;
+             arcSize=6;spacingTop=8;"
+      vertex="1" parent="1">
+      <mxGeometry x="620" y="2590" width="560" height="200" as="geometry" />
+    </mxCell>
+
+    <!-- ── Poll Endpoint ─────────────────────────────────────── -->
+    <mxCell id="18"
+      value="&lt;font style=&quot;font-size:45px;&quot;&gt;&lt;b&gt;Poll Endpoint Returns&lt;/b&gt;&lt;/font&gt;&lt;br/&gt;
+&lt;font style=&quot;font-size:40px;&quot;&gt;matches  ·  image_b64  ·  plates&lt;/font&gt;"
+      style="rounded=1;whiteSpace=wrap;html=1;fillColor=#23395d;fontColor=#FFFFFF;
+             strokeColor=#0d1f38;strokeWidth=2;verticalAlign=middle;align=center;
+             arcSize=6;spacingTop=8;"
+      vertex="1" parent="1">
+      <mxGeometry x="620" y="2850" width="560" height="170" as="geometry" />
+    </mxCell>
+
+    <!-- ── Frontend Renders ──────────────────────────────────── -->
+    <mxCell id="19"
+      value="&lt;font style=&quot;font-size:45px;&quot;&gt;&lt;b&gt;Frontend Renders&lt;/b&gt;&lt;/font&gt;&lt;br/&gt;
+&lt;font style=&quot;font-size:40px;&quot;&gt;·  Base64 image&lt;br/&gt;·  SVG bbox overlay&lt;br/&gt;·  Recognition feed&lt;/font&gt;"
+      style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1B3A6B;fontColor=#FFFFFF;
+             strokeColor=#0d2444;strokeWidth=2;verticalAlign=middle;align=center;
+             arcSize=6;spacingTop=8;"
+      vertex="1" parent="1">
+      <mxGeometry x="620" y="3080" width="560" height="250" as="geometry" />
+    </mxCell>
+
+    <!-- ── Worker still active?  (diamond) ──────────────────── -->
+    <mxCell id="20"
+      value="&lt;font style=&quot;font-size:45px;&quot;&gt;&lt;b&gt;Worker still active?&lt;/b&gt;&lt;/font&gt;"
+      style="rhombus;whiteSpace=wrap;html=1;fillColor=#d79b00;fontColor=#FFFFFF;
+             strokeColor=#a07000;strokeWidth=2;verticalAlign=middle;align=center;"
+      vertex="1" parent="1">
+      <mxGeometry x="610" y="3390" width="580" height="160" as="geometry" />
+    </mxCell>
+    <!-- centre = (900, 3470)  left=(610,3470)  right=(1190,3470) -->
+
+    <!-- ── Stop Thread  (No / right) ────────────────────────── -->
+    <mxCell id="21"
+      value="&lt;font style=&quot;font-size:45px;&quot;&gt;&lt;b&gt;Stop Thread&lt;/b&gt;&lt;/font&gt;&lt;br/&gt;
+&lt;font style=&quot;font-size:40px;&quot;&gt;Release RTSP&lt;/font&gt;"
+      style="rounded=1;whiteSpace=wrap;html=1;fillColor=#555555;fontColor=#FFFFFF;
+             strokeColor=#333333;strokeWidth=2;verticalAlign=middle;align=center;
+             arcSize=8;spacingTop=8;"
+      vertex="1" parent="1">
+      <mxGeometry x="1250" y="3620" width="480" height="160" as="geometry" />
+    </mxCell>
+
+    <!-- ═══════════════════════════════════════════════════════
+         ARROWS  ─ MAIN FLOW (straight down, centre x=900)
+    ══════════════════════════════════════════════════════════ -->
+
+    <mxCell id="30" value="" style="endArrow=block;endFill=1;html=1;strokeColor=#333;strokeWidth=2;"
+      edge="1" source="3" target="4" parent="1">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+    <mxCell id="31" value="" style="endArrow=block;endFill=1;html=1;strokeColor=#333;strokeWidth=2;"
+      edge="1" source="4" target="5" parent="1">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+    <mxCell id="32" value="" style="endArrow=block;endFill=1;html=1;strokeColor=#333;strokeWidth=2;"
+      edge="1" source="5" target="6" parent="1">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+    <mxCell id="33" value="" style="endArrow=block;endFill=1;html=1;strokeColor=#333;strokeWidth=2;"
+      edge="1" source="6" target="7" parent="1">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+
+    <!-- ── Frame OK? YES → Pipeline (exits left, enters pipeline top) -->
+    <mxCell id="34"
+      value="&lt;font style=&quot;font-size:38px;&quot;&gt;&lt;b&gt;Yes&lt;/b&gt;&lt;/font&gt;"
+      style="endArrow=block;endFill=1;html=1;strokeColor=#2D6A4F;strokeWidth=2;
+             exitX=0;exitY=0.5;exitDx=0;exitDy=0;
+             entryX=0.5;entryY=0;entryDx=0;entryDy=0;"
+      edge="1" source="7" target="8" parent="1">
+      <mxGeometry relative="1" as="geometry">
+        <Array as="points">
+          <mxPoint x="340" y="1020" />
+        </Array>
+      </mxGeometry>
+    </mxCell>
+
+    <!-- ── Frame OK? NO → Log Error (exits right) -->
+    <mxCell id="35"
+      value="&lt;font style=&quot;font-size:38px;&quot;&gt;&lt;b&gt;No&lt;/b&gt;&lt;/font&gt;"
+      style="endArrow=block;endFill=1;html=1;strokeColor=#b85450;strokeWidth=2;
+             exitX=1;exitY=0.5;exitDx=0;exitDy=0;
+             entryX=0;entryY=0.5;entryDx=0;entryDy=0;"
+      edge="1" source="7" target="13" parent="1">
+      <mxGeometry relative="1" as="geometry">
+        <Array as="points">
+          <mxPoint x="1190" y="1020" />
+          <mxPoint x="1250" y="1020" />
+          <mxPoint x="1250" y="1265" />
+        </Array>
+      </mxGeometry>
+    </mxCell>
+
+    <!-- ── Log Error → Retry back to Frame OK? diamond -->
+    <mxCell id="36"
+      value="&lt;font style=&quot;font-size:36px;&quot;&gt;Retry on error&lt;/font&gt;"
+      style="endArrow=block;endFill=1;html=1;strokeColor=#b85450;strokeWidth=2;
+             dashed=1;dashPattern=8 5;
+             exitX=1;exitY=0;exitDx=0;exitDy=0;
+             entryX=1;entryY=0.5;entryDx=0;entryDy=0;"
+      edge="1" source="13" target="7" parent="1">
+      <mxGeometry relative="1" as="geometry">
+        <Array as="points">
+          <mxPoint x="1870" y="1160" />
+          <mxPoint x="1870" y="1020" />
+          <mxPoint x="1190" y="1020" />
+        </Array>
+      </mxGeometry>
+    </mxCell>
+
+    <!-- ═══════════════════════════════════════════════════════
+         ARROWS  ─ INSIDE PIPELINE  (sub-box to sub-box)
+    ══════════════════════════════════════════════════════════ -->
+
+    <mxCell id="37"
+      value="&lt;font style=&quot;font-size:36px;color:#e65100;&quot;&gt;faces&lt;/font&gt;"
+      style="endArrow=block;endFill=1;html=1;strokeColor=#e65100;strokeWidth=2;"
+      edge="1" source="9" target="10" parent="1">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+    <mxCell id="38"
+      value="&lt;font style=&quot;font-size:36px;color:#e65100;&quot;&gt;embeddings&lt;/font&gt;"
+      style="endArrow=block;endFill=1;html=1;strokeColor=#e65100;strokeWidth=2;"
+      edge="1" source="10" target="11" parent="1">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+    <mxCell id="39"
+      value="&lt;font style=&quot;font-size:36px;color:#e65100;&quot;&gt;matches&lt;/font&gt;"
+      style="endArrow=block;endFill=1;html=1;strokeColor=#e65100;strokeWidth=2;"
+      edge="1" source="11" target="12" parent="1">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+
+    <!-- ── ANPR bottom → Any threat? diamond (exits pipeline, goes right) -->
+    <mxCell id="40"
+      value="&lt;font style=&quot;font-size:36px;color:#e65100;&quot;&gt;plates&lt;/font&gt;"
+      style="endArrow=block;endFill=1;html=1;strokeColor=#e65100;strokeWidth=2;
+             exitX=0.5;exitY=1;exitDx=0;exitDy=0;
+             entryX=0;entryY=0.5;entryDx=0;entryDy=0;"
+      edge="1" source="12" target="14" parent="1">
+      <mxGeometry relative="1" as="geometry">
+        <Array as="points">
+          <mxPoint x="340" y="2050" />
+          <mxPoint x="610" y="2050" />
+        </Array>
+      </mxGeometry>
+    </mxCell>
+
+    <!-- ═══════════════════════════════════════════════════════
+         ARROWS  ─ THREAT DECISION  BRANCHES
+    ══════════════════════════════════════════════════════════ -->
+
+    <!-- Any threat? YES → Persist (exits left) -->
+    <mxCell id="41"
+      value="&lt;font style=&quot;font-size:38px;&quot;&gt;&lt;b&gt;Yes&lt;/b&gt;&lt;/font&gt;"
+      style="endArrow=block;endFill=1;html=1;strokeColor=#5a0ea0;strokeWidth=2;
+             exitX=0;exitY=0.5;exitDx=0;exitDy=0;
+             entryX=0.5;entryY=0;entryDx=0;entryDy=0;"
+      edge="1" source="14" target="15" parent="1">
+      <mxGeometry relative="1" as="geometry">
+        <Array as="points">
+          <mxPoint x="320" y="2160" />
+        </Array>
+      </mxGeometry>
+    </mxCell>
+
+    <!-- Any threat? NO → Update State (exits right) -->
+    <mxCell id="42"
+      value="&lt;font style=&quot;font-size:38px;&quot;&gt;&lt;b&gt;No&lt;/b&gt;&lt;/font&gt;"
+      style="endArrow=block;endFill=1;html=1;strokeColor=#2D6A4F;strokeWidth=2;
+             exitX=1;exitY=0.5;exitDx=0;exitDy=0;
+             entryX=0.5;entryY=0;entryDx=0;entryDy=0;"
+      edge="1" source="14" target="16" parent="1">
+      <mxGeometry relative="1" as="geometry">
+        <Array as="points">
+          <mxPoint x="1490" y="2160" />
+        </Array>
+      </mxGeometry>
+    </mxCell>
+
+    <!-- Persist bottom → Encode frame  (merge left) -->
+    <mxCell id="43" value=""
+      style="endArrow=block;endFill=1;html=1;strokeColor=#5a0ea0;strokeWidth=2;
+             exitX=0.5;exitY=1;exitDx=0;exitDy=0;
+             entryX=0.5;entryY=0;entryDx=0;entryDy=0;"
+      edge="1" source="15" target="17" parent="1">
+      <mxGeometry relative="1" as="geometry">
+        <Array as="points">
+          <mxPoint x="320" y="2555" />
+          <mxPoint x="900" y="2555" />
+        </Array>
+      </mxGeometry>
+    </mxCell>
+
+    <!-- Update State bottom → Encode frame  (merge right) -->
+    <mxCell id="44" value=""
+      style="endArrow=block;endFill=1;html=1;strokeColor=#2D6A4F;strokeWidth=2;
+             exitX=0.5;exitY=1;exitDx=0;exitDy=0;
+             entryX=0.5;entryY=0;entryDx=0;entryDy=0;"
+      edge="1" source="16" target="17" parent="1">
+      <mxGeometry relative="1" as="geometry">
+        <Array as="points">
+          <mxPoint x="1490" y="2555" />
+          <mxPoint x="900" y="2555" />
+        </Array>
+      </mxGeometry>
+    </mxCell>
+
+    <!-- ═══════════════════════════════════════════════════════
+         ARROWS  ─ LOWER MAIN FLOW  (straight down, centre x=900)
+    ══════════════════════════════════════════════════════════ -->
+
+    <mxCell id="45" value="" style="endArrow=block;endFill=1;html=1;strokeColor=#333;strokeWidth=2;"
+      edge="1" source="17" target="18" parent="1">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+    <mxCell id="46" value="" style="endArrow=block;endFill=1;html=1;strokeColor=#333;strokeWidth=2;"
+      edge="1" source="18" target="19" parent="1">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+    <mxCell id="47" value="" style="endArrow=block;endFill=1;html=1;strokeColor=#333;strokeWidth=2;"
+      edge="1" source="19" target="20" parent="1">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+
+    <!-- ── Worker active? NO → Stop Thread (exits right) -->
+    <mxCell id="48"
+      value="&lt;font style=&quot;font-size:38px;&quot;&gt;&lt;b&gt;No&lt;/b&gt;&lt;/font&gt;"
+      style="endArrow=block;endFill=1;html=1;strokeColor=#555;strokeWidth=2;
+             exitX=1;exitY=0.5;exitDx=0;exitDy=0;
+             entryX=0.5;entryY=0;entryDx=0;entryDy=0;"
+      edge="1" source="20" target="21" parent="1">
+      <mxGeometry relative="1" as="geometry">
+        <Array as="points">
+          <mxPoint x="1490" y="3470" />
+        </Array>
+      </mxGeometry>
+    </mxCell>
+
+    <!-- ── Worker active? YES → loop back to Capture Frame
+         Exits left, runs down the left side of the diagram, loops up -->
+    <mxCell id="49"
+      value="&lt;font style=&quot;font-size:38px;&quot;&gt;&lt;b&gt;Yes — next frame&lt;/b&gt;&lt;/font&gt;"
+      style="endArrow=block;endFill=1;html=1;strokeColor=#23395d;strokeWidth=3;
+             dashed=1;dashPattern=10 6;
+             exitX=0;exitY=0.5;exitDx=0;exitDy=0;
+             entryX=0;entryY=0.5;entryDx=0;entryDy=0;"
+      edge="1" source="20" target="6" parent="1">
+      <mxGeometry relative="1" as="geometry">
+        <Array as="points">
+          <mxPoint x="25" y="3470" />
+          <mxPoint x="25" y="810" />
+        </Array>
+      </mxGeometry>
+    </mxCell>
+
+  </root>
+</mxGraphModel>

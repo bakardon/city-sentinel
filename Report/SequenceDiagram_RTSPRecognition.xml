@@ -1,0 +1,394 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mxGraphModel dx="1422" dy="762" grid="1" gridSize="10" guides="1" tooltips="1"
+  connect="1" arrows="1" fold="1" page="1" pageScale="1"
+  pageWidth="2500" pageHeight="2200" math="0" shadow="0">
+  <root>
+    <mxCell id="0" />
+    <mxCell id="1" parent="0" />
+
+    <!-- ═══════════════════════════════════════════════════════
+         OUTER BOUNDARY
+    ══════════════════════════════════════════════════════════ -->
+    <mxCell id="2"
+      value="&lt;font style=&quot;font-size:45px;&quot;&gt;&lt;b&gt;RTSP RECOGNITION — SEQUENCE DIAGRAM&lt;/b&gt;&lt;/font&gt;"
+      style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f9f9f9;strokeColor=#102A6B;
+             strokeWidth=4;verticalAlign=top;align=center;spacingTop=18;"
+      vertex="1" parent="1">
+      <mxGeometry x="50" y="50" width="2380" height="2040" as="geometry" />
+    </mxCell>
+
+    <!-- ═══════════════════════════════════════════════════════
+         PARTICIPANT BOXES
+    ══════════════════════════════════════════════════════════ -->
+
+    <!-- Browser (React) — center x=215 -->
+    <mxCell id="3"
+      value="&lt;font style=&quot;font-size:40px;&quot;&gt;&lt;b&gt;Browser&lt;/b&gt;&lt;br/&gt;&lt;font style=&quot;font-size:36px;&quot;&gt;(React)&lt;/font&gt;&lt;/font&gt;"
+      style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1B3A6B;fontColor=#FFFFFF;
+             strokeColor=#0d2444;strokeWidth=2;verticalAlign=middle;align=center;arcSize=8;"
+      vertex="1" parent="1">
+      <mxGeometry x="90" y="120" width="250" height="110" as="geometry" />
+    </mxCell>
+
+    <!-- Next.js RtspPanel — center x=660 -->
+    <mxCell id="4"
+      value="&lt;font style=&quot;font-size:40px;&quot;&gt;&lt;b&gt;Next.js&lt;/b&gt;&lt;br/&gt;&lt;font style=&quot;font-size:36px;&quot;&gt;RtspPanel&lt;/font&gt;&lt;/font&gt;"
+      style="rounded=1;whiteSpace=wrap;html=1;fillColor=#23395d;fontColor=#FFFFFF;
+             strokeColor=#0d1f38;strokeWidth=2;verticalAlign=middle;align=center;arcSize=8;"
+      vertex="1" parent="1">
+      <mxGeometry x="535" y="120" width="250" height="110" as="geometry" />
+    </mxCell>
+
+    <!-- FastAPI Backend — center x=1160 -->
+    <mxCell id="5"
+      value="&lt;font style=&quot;font-size:40px;&quot;&gt;&lt;b&gt;FastAPI&lt;/b&gt;&lt;br/&gt;&lt;font style=&quot;font-size:36px;&quot;&gt;Backend&lt;/font&gt;&lt;/font&gt;"
+      style="rounded=1;whiteSpace=wrap;html=1;fillColor=#2D6A4F;fontColor=#FFFFFF;
+             strokeColor=#1b4232;strokeWidth=2;verticalAlign=middle;align=center;arcSize=8;"
+      vertex="1" parent="1">
+      <mxGeometry x="1035" y="120" width="250" height="110" as="geometry" />
+    </mxCell>
+
+    <!-- RTSPStream (Thread) — center x=1680 -->
+    <mxCell id="6"
+      value="&lt;font style=&quot;font-size:40px;&quot;&gt;&lt;b&gt;RTSPStream&lt;/b&gt;&lt;br/&gt;&lt;font style=&quot;font-size:36px;&quot;&gt;(Thread)&lt;/font&gt;&lt;/font&gt;"
+      style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d79b00;fontColor=#FFFFFF;
+             strokeColor=#a07000;strokeWidth=2;verticalAlign=middle;align=center;arcSize=8;"
+      vertex="1" parent="1">
+      <mxGeometry x="1555" y="120" width="250" height="110" as="geometry" />
+    </mxCell>
+
+    <!-- Supabase DB — center x=2185 -->
+    <mxCell id="7"
+      value="&lt;font style=&quot;font-size:40px;&quot;&gt;&lt;b&gt;Supabase&lt;/b&gt;&lt;br/&gt;&lt;font style=&quot;font-size:36px;&quot;&gt;DB&lt;/font&gt;&lt;/font&gt;"
+      style="rounded=1;whiteSpace=wrap;html=1;fillColor=#5a0ea0;fontColor=#FFFFFF;
+             strokeColor=#3d0070;strokeWidth=2;verticalAlign=middle;align=center;arcSize=8;"
+      vertex="1" parent="1">
+      <mxGeometry x="2080" y="120" width="210" height="110" as="geometry" />
+    </mxCell>
+
+    <!-- ═══════════════════════════════════════════════════════
+         LIFELINES  (dashed vertical lines)
+    ══════════════════════════════════════════════════════════ -->
+
+    <mxCell id="10" value="" style="endArrow=none;dashed=1;strokeColor=#888;strokeWidth=2;" edge="1" parent="1">
+      <mxGeometry relative="0" as="geometry">
+        <mxPoint x="215" y="230" as="sourcePoint" />
+        <mxPoint x="215" y="2040" as="targetPoint" />
+      </mxGeometry>
+    </mxCell>
+
+    <mxCell id="11" value="" style="endArrow=none;dashed=1;strokeColor=#888;strokeWidth=2;" edge="1" parent="1">
+      <mxGeometry relative="0" as="geometry">
+        <mxPoint x="660" y="230" as="sourcePoint" />
+        <mxPoint x="660" y="2040" as="targetPoint" />
+      </mxGeometry>
+    </mxCell>
+
+    <mxCell id="12" value="" style="endArrow=none;dashed=1;strokeColor=#888;strokeWidth=2;" edge="1" parent="1">
+      <mxGeometry relative="0" as="geometry">
+        <mxPoint x="1160" y="230" as="sourcePoint" />
+        <mxPoint x="1160" y="2040" as="targetPoint" />
+      </mxGeometry>
+    </mxCell>
+
+    <mxCell id="13" value="" style="endArrow=none;dashed=1;strokeColor=#888;strokeWidth=2;" edge="1" parent="1">
+      <mxGeometry relative="0" as="geometry">
+        <mxPoint x="1680" y="230" as="sourcePoint" />
+        <mxPoint x="1680" y="2040" as="targetPoint" />
+      </mxGeometry>
+    </mxCell>
+
+    <mxCell id="14" value="" style="endArrow=none;dashed=1;strokeColor=#888;strokeWidth=2;" edge="1" parent="1">
+      <mxGeometry relative="0" as="geometry">
+        <mxPoint x="2185" y="230" as="sourcePoint" />
+        <mxPoint x="2185" y="2040" as="targetPoint" />
+      </mxGeometry>
+    </mxCell>
+
+    <!-- ═══════════════════════════════════════════════════════
+         MESSAGE ARROWS
+    ══════════════════════════════════════════════════════════ -->
+
+    <!-- 1. Browser ──► RtspPanel : page load -->
+    <mxCell id="20"
+      value="&lt;font style=&quot;font-size:38px;&quot;&gt;page load&lt;/font&gt;"
+      style="endArrow=block;endFill=1;startArrow=none;html=1;
+             strokeColor=#333;strokeWidth=2;
+             align=center;verticalAlign=bottom;"
+      edge="1" parent="1">
+      <mxGeometry relative="0" as="geometry">
+        <mxPoint x="215" y="310" as="sourcePoint" />
+        <mxPoint x="660" y="310" as="targetPoint" />
+      </mxGeometry>
+    </mxCell>
+
+    <!-- 2. RtspPanel ──► FastAPI : tick() every 1500ms  /  POST /recognize/rtsp -->
+    <mxCell id="21"
+      value="&lt;font style=&quot;font-size:38px;&quot;&gt;tick()  every 1500ms&lt;br/&gt;POST /recognize/rtsp&lt;/font&gt;"
+      style="endArrow=block;endFill=1;startArrow=none;html=1;
+             strokeColor=#333;strokeWidth=2;
+             align=center;verticalAlign=bottom;"
+      edge="1" parent="1">
+      <mxGeometry relative="0" as="geometry">
+        <mxPoint x="660" y="430" as="sourcePoint" />
+        <mxPoint x="1160" y="430" as="targetPoint" />
+      </mxGeometry>
+    </mxCell>
+
+    <!-- 3. FastAPI ──► RTSPStream : acquire stream -->
+    <mxCell id="22"
+      value="&lt;font style=&quot;font-size:38px;&quot;&gt;acquire stream&lt;/font&gt;"
+      style="endArrow=block;endFill=1;startArrow=none;html=1;
+             strokeColor=#333;strokeWidth=2;
+             align=center;verticalAlign=bottom;"
+      edge="1" parent="1">
+      <mxGeometry relative="0" as="geometry">
+        <mxPoint x="1160" y="580" as="sourcePoint" />
+        <mxPoint x="1680" y="580" as="targetPoint" />
+      </mxGeometry>
+    </mxCell>
+
+    <!-- 4. RTSPStream self-loop : read frame -->
+    <mxCell id="23"
+      value="&lt;font style=&quot;font-size:38px;&quot;&gt;read frame&lt;/font&gt;"
+      style="endArrow=block;endFill=1;startArrow=none;html=1;
+             strokeColor=#d79b00;strokeWidth=2;
+             align=left;spacingLeft=8;verticalAlign=middle;"
+      edge="1" parent="1">
+      <mxGeometry relative="0" as="geometry">
+        <mxPoint x="1680" y="680" as="sourcePoint" />
+        <mxPoint x="1680" y="790" as="targetPoint" />
+        <Array as="points">
+          <mxPoint x="1860" y="680" />
+          <mxPoint x="1860" y="790" />
+        </Array>
+      </mxGeometry>
+    </mxCell>
+
+    <!-- 5. RTSPStream ──► FastAPI : latest_result() [return] -->
+    <mxCell id="24"
+      value="&lt;font style=&quot;font-size:38px;&quot;&gt;latest_result()&lt;/font&gt;"
+      style="endArrow=block;endFill=1;startArrow=none;html=1;
+             strokeColor=#333;strokeWidth=2;
+             align=center;verticalAlign=bottom;"
+      edge="1" parent="1">
+      <mxGeometry relative="0" as="geometry">
+        <mxPoint x="1680" y="880" as="sourcePoint" />
+        <mxPoint x="1160" y="880" as="targetPoint" />
+      </mxGeometry>
+    </mxCell>
+
+    <!-- 6. FastAPI self-loop : recognize_from_image -->
+    <mxCell id="25"
+      value="&lt;font style=&quot;font-size:38px;&quot;&gt;recognize_from_image(frame)&lt;br/&gt;(InsightFace embed + cosine)&lt;/font&gt;"
+      style="endArrow=block;endFill=1;startArrow=none;html=1;
+             strokeColor=#2D6A4F;strokeWidth=2;
+             align=left;spacingLeft=8;verticalAlign=middle;"
+      edge="1" parent="1">
+      <mxGeometry relative="0" as="geometry">
+        <mxPoint x="1160" y="980" as="sourcePoint" />
+        <mxPoint x="1160" y="1110" as="targetPoint" />
+        <Array as="points">
+          <mxPoint x="1360" y="980" />
+          <mxPoint x="1360" y="1110" />
+        </Array>
+      </mxGeometry>
+    </mxCell>
+
+    <!-- 7. FastAPI self-loop : detect_plates -->
+    <mxCell id="26"
+      value="&lt;font style=&quot;font-size:38px;&quot;&gt;detect_plates(frame)&lt;br/&gt;(YOLO + EasyOCR)&lt;/font&gt;"
+      style="endArrow=block;endFill=1;startArrow=none;html=1;
+             strokeColor=#2D6A4F;strokeWidth=2;
+             align=left;spacingLeft=8;verticalAlign=middle;"
+      edge="1" parent="1">
+      <mxGeometry relative="0" as="geometry">
+        <mxPoint x="1160" y="1190" as="sourcePoint" />
+        <mxPoint x="1160" y="1320" as="targetPoint" />
+        <Array as="points">
+          <mxPoint x="1360" y="1190" />
+          <mxPoint x="1360" y="1320" />
+        </Array>
+      </mxGeometry>
+    </mxCell>
+
+    <!-- 8. FastAPI ──► Supabase : INSERT person_event -->
+    <mxCell id="27"
+      value="&lt;font style=&quot;font-size:38px;&quot;&gt;INSERT person_event&lt;/font&gt;"
+      style="endArrow=block;endFill=1;startArrow=none;html=1;
+             strokeColor=#333;strokeWidth=2;
+             align=center;verticalAlign=bottom;"
+      edge="1" parent="1">
+      <mxGeometry relative="0" as="geometry">
+        <mxPoint x="1160" y="1420" as="sourcePoint" />
+        <mxPoint x="2185" y="1420" as="targetPoint" />
+      </mxGeometry>
+    </mxCell>
+
+    <!-- 9. FastAPI ──► RtspPanel : return {matches, plates, image_b64, frame_ts} -->
+    <mxCell id="28"
+      value="&lt;font style=&quot;font-size:38px;&quot;&gt;return  {matches,  plates,&lt;br/&gt;image_b64,  frame_ts}&lt;/font&gt;"
+      style="endArrow=block;endFill=1;startArrow=none;html=1;
+             strokeColor=#333;strokeWidth=2;
+             align=center;verticalAlign=bottom;"
+      edge="1" parent="1">
+      <mxGeometry relative="0" as="geometry">
+        <mxPoint x="1160" y="1550" as="sourcePoint" />
+        <mxPoint x="660" y="1550" as="targetPoint" />
+      </mxGeometry>
+    </mxCell>
+
+    <!-- 10. RtspPanel ──► Browser : setState (matches, plates, dims) -->
+    <mxCell id="29"
+      value="&lt;font style=&quot;font-size:38px;&quot;&gt;setState (matches,  plates,  dims)&lt;/font&gt;"
+      style="endArrow=block;endFill=1;startArrow=none;html=1;
+             strokeColor=#333;strokeWidth=2;
+             align=center;verticalAlign=bottom;"
+      edge="1" parent="1">
+      <mxGeometry relative="0" as="geometry">
+        <mxPoint x="660" y="1680" as="sourcePoint" />
+        <mxPoint x="215" y="1680" as="targetPoint" />
+      </mxGeometry>
+    </mxCell>
+
+    <!-- 11. Browser self-loop : SVG overlay rendered on video feed -->
+    <mxCell id="30"
+      value="&lt;font style=&quot;font-size:38px;&quot;&gt;SVG overlay rendered&lt;br/&gt;on video feed&lt;/font&gt;"
+      style="endArrow=block;endFill=1;startArrow=none;html=1;
+             strokeColor=#1B3A6B;strokeWidth=2;
+             align=left;spacingLeft=8;verticalAlign=middle;"
+      edge="1" parent="1">
+      <mxGeometry relative="0" as="geometry">
+        <mxPoint x="215" y="1790" as="sourcePoint" />
+        <mxPoint x="215" y="1920" as="targetPoint" />
+        <Array as="points">
+          <mxPoint x="395" y="1790" />
+          <mxPoint x="395" y="1920" />
+        </Array>
+      </mxGeometry>
+    </mxCell>
+
+    <!-- ═══════════════════════════════════════════════════════
+         SEQUENCE NUMBERS  (small circles on lifelines)
+    ══════════════════════════════════════════════════════════ -->
+    <mxCell id="40" value="&lt;font style=&quot;font-size:30px;&quot;&gt;&lt;b&gt;1&lt;/b&gt;&lt;/font&gt;"
+      style="ellipse;whiteSpace=wrap;html=1;fillColor=#1B3A6B;fontColor=#fff;
+             strokeColor=#0d2444;strokeWidth=1;align=center;verticalAlign=middle;"
+      vertex="1" parent="1">
+      <mxGeometry x="190" y="292" width="42" height="42" as="geometry" />
+    </mxCell>
+    <mxCell id="41" value="&lt;font style=&quot;font-size:30px;&quot;&gt;&lt;b&gt;2&lt;/b&gt;&lt;/font&gt;"
+      style="ellipse;whiteSpace=wrap;html=1;fillColor=#23395d;fontColor=#fff;
+             strokeColor=#0d1f38;strokeWidth=1;align=center;verticalAlign=middle;"
+      vertex="1" parent="1">
+      <mxGeometry x="636" y="411" width="42" height="42" as="geometry" />
+    </mxCell>
+    <mxCell id="42" value="&lt;font style=&quot;font-size:30px;&quot;&gt;&lt;b&gt;3&lt;/b&gt;&lt;/font&gt;"
+      style="ellipse;whiteSpace=wrap;html=1;fillColor=#2D6A4F;fontColor=#fff;
+             strokeColor=#1b4232;strokeWidth=1;align=center;verticalAlign=middle;"
+      vertex="1" parent="1">
+      <mxGeometry x="1136" y="561" width="42" height="42" as="geometry" />
+    </mxCell>
+    <mxCell id="43" value="&lt;font style=&quot;font-size:30px;&quot;&gt;&lt;b&gt;4&lt;/b&gt;&lt;/font&gt;"
+      style="ellipse;whiteSpace=wrap;html=1;fillColor=#d79b00;fontColor=#fff;
+             strokeColor=#a07000;strokeWidth=1;align=center;verticalAlign=middle;"
+      vertex="1" parent="1">
+      <mxGeometry x="1656" y="661" width="42" height="42" as="geometry" />
+    </mxCell>
+    <mxCell id="44" value="&lt;font style=&quot;font-size:30px;&quot;&gt;&lt;b&gt;5&lt;/b&gt;&lt;/font&gt;"
+      style="ellipse;whiteSpace=wrap;html=1;fillColor=#d79b00;fontColor=#fff;
+             strokeColor=#a07000;strokeWidth=1;align=center;verticalAlign=middle;"
+      vertex="1" parent="1">
+      <mxGeometry x="1656" y="861" width="42" height="42" as="geometry" />
+    </mxCell>
+    <mxCell id="45" value="&lt;font style=&quot;font-size:30px;&quot;&gt;&lt;b&gt;6&lt;/b&gt;&lt;/font&gt;"
+      style="ellipse;whiteSpace=wrap;html=1;fillColor=#2D6A4F;fontColor=#fff;
+             strokeColor=#1b4232;strokeWidth=1;align=center;verticalAlign=middle;"
+      vertex="1" parent="1">
+      <mxGeometry x="1136" y="961" width="42" height="42" as="geometry" />
+    </mxCell>
+    <mxCell id="46" value="&lt;font style=&quot;font-size:30px;&quot;&gt;&lt;b&gt;7&lt;/b&gt;&lt;/font&gt;"
+      style="ellipse;whiteSpace=wrap;html=1;fillColor=#2D6A4F;fontColor=#fff;
+             strokeColor=#1b4232;strokeWidth=1;align=center;verticalAlign=middle;"
+      vertex="1" parent="1">
+      <mxGeometry x="1136" y="1171" width="42" height="42" as="geometry" />
+    </mxCell>
+    <mxCell id="47" value="&lt;font style=&quot;font-size:30px;&quot;&gt;&lt;b&gt;8&lt;/b&gt;&lt;/font&gt;"
+      style="ellipse;whiteSpace=wrap;html=1;fillColor=#5a0ea0;fontColor=#fff;
+             strokeColor=#3d0070;strokeWidth=1;align=center;verticalAlign=middle;"
+      vertex="1" parent="1">
+      <mxGeometry x="1136" y="1401" width="42" height="42" as="geometry" />
+    </mxCell>
+    <mxCell id="48" value="&lt;font style=&quot;font-size:30px;&quot;&gt;&lt;b&gt;9&lt;/b&gt;&lt;/font&gt;"
+      style="ellipse;whiteSpace=wrap;html=1;fillColor=#2D6A4F;fontColor=#fff;
+             strokeColor=#1b4232;strokeWidth=1;align=center;verticalAlign=middle;"
+      vertex="1" parent="1">
+      <mxGeometry x="1136" y="1531" width="42" height="42" as="geometry" />
+    </mxCell>
+    <mxCell id="49" value="&lt;font style=&quot;font-size:28px;&quot;&gt;&lt;b&gt;10&lt;/b&gt;&lt;/font&gt;"
+      style="ellipse;whiteSpace=wrap;html=1;fillColor=#23395d;fontColor=#fff;
+             strokeColor=#0d1f38;strokeWidth=1;align=center;verticalAlign=middle;"
+      vertex="1" parent="1">
+      <mxGeometry x="636" y="1661" width="42" height="42" as="geometry" />
+    </mxCell>
+    <mxCell id="50" value="&lt;font style=&quot;font-size:28px;&quot;&gt;&lt;b&gt;11&lt;/b&gt;&lt;/font&gt;"
+      style="ellipse;whiteSpace=wrap;html=1;fillColor=#1B3A6B;fontColor=#fff;
+             strokeColor=#0d2444;strokeWidth=1;align=center;verticalAlign=middle;"
+      vertex="1" parent="1">
+      <mxGeometry x="191" y="1771" width="42" height="42" as="geometry" />
+    </mxCell>
+
+    <!-- ═══════════════════════════════════════════════════════
+         HORIZONTAL DIVIDER LINES  (to separate regions visually)
+    ══════════════════════════════════════════════════════════ -->
+
+    <!-- Divider after step 2 (entering backend processing) -->
+    <mxCell id="60" value="" style="endArrow=none;dashed=1;strokeColor=#ccc;strokeWidth=1;" edge="1" parent="1">
+      <mxGeometry relative="0" as="geometry">
+        <mxPoint x="90" y="540" as="sourcePoint" />
+        <mxPoint x="2320" y="540" as="targetPoint" />
+      </mxGeometry>
+    </mxCell>
+    <!-- Divider after step 7 (before DB write) -->
+    <mxCell id="61" value="" style="endArrow=none;dashed=1;strokeColor=#ccc;strokeWidth=1;" edge="1" parent="1">
+      <mxGeometry relative="0" as="geometry">
+        <mxPoint x="90" y="1380" as="sourcePoint" />
+        <mxPoint x="2320" y="1380" as="targetPoint" />
+      </mxGeometry>
+    </mxCell>
+    <!-- Divider after step 9 (response returned to frontend) -->
+    <mxCell id="62" value="" style="endArrow=none;dashed=1;strokeColor=#ccc;strokeWidth=1;" edge="1" parent="1">
+      <mxGeometry relative="0" as="geometry">
+        <mxPoint x="90" y="1640" as="sourcePoint" />
+        <mxPoint x="2320" y="1640" as="targetPoint" />
+      </mxGeometry>
+    </mxCell>
+
+    <!-- Region labels -->
+    <mxCell id="70"
+      value="&lt;font style=&quot;font-size:34px;color:#888;&quot;&gt;Frontend trigger&lt;/font&gt;"
+      style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;"
+      vertex="1" parent="1">
+      <mxGeometry x="90" y="265" width="350" height="55" as="geometry" />
+    </mxCell>
+    <mxCell id="71"
+      value="&lt;font style=&quot;font-size:34px;color:#888;&quot;&gt;Backend processing&lt;/font&gt;"
+      style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;"
+      vertex="1" parent="1">
+      <mxGeometry x="90" y="555" width="380" height="55" as="geometry" />
+    </mxCell>
+    <mxCell id="72"
+      value="&lt;font style=&quot;font-size:34px;color:#888;&quot;&gt;Persist &amp; respond&lt;/font&gt;"
+      style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;"
+      vertex="1" parent="1">
+      <mxGeometry x="90" y="1395" width="380" height="55" as="geometry" />
+    </mxCell>
+    <mxCell id="73"
+      value="&lt;font style=&quot;font-size:34px;color:#888;&quot;&gt;Frontend render&lt;/font&gt;"
+      style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;"
+      vertex="1" parent="1">
+      <mxGeometry x="90" y="1655" width="380" height="55" as="geometry" />
+    </mxCell>
+
+  </root>
+</mxGraphModel>
