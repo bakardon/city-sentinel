@@ -94,7 +94,11 @@ pip install -r requirements.txt
 
 ### 3. Configure services
 
-Configure the required database/environment variables for the deployment you intend to use. Model weights and camera streams are deployment-specific and are not assumed to be bundled with the repository.
+```bash
+cp .env.example .env
+```
+
+Fill in the variables you need. [`.env.example`](.env.example) lists them grouped by module: Supabase credentials, model weight paths, RTSP camera URLs and per-detector thresholds. Everything is optional; without Supabase the services fall back to in-memory storage. Model weights and camera streams are deployment-specific and are not assumed to be bundled with the repository.
 
 ### 4. Start the API
 

@@ -15,14 +15,14 @@ const DEFAULT_PRESETS: CameraPreset[] = [
   {
     id: "cam_1",
     label: "Camera 1",
-    rtsp_url: "rtsp://admin:fcse1234@10.1.139.235:554/Streaming/Channels/101",
+    rtsp_url: "rtsp://user:password@camera-host:554/Streaming/Channels/101",
     camera_id: "cam_1",
     camera_location: "Main Gate",
   },
   {
     id: "cam_2",
     label: "Camera 2",
-    rtsp_url: "rtsp://admin:fcse1234@10.1.139.235:554/Streaming/Channels/201",
+    rtsp_url: "rtsp://user:password@camera-host:554/Streaming/Channels/201",
     camera_id: "cam_2",
     camera_location: "Parking Lot",
   },

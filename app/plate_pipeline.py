@@ -10,7 +10,7 @@ import easyocr
 from app.supabase_client import get_supabase
 
 # Configuration
-RTSP_URL = os.getenv("RTSP_URL", "rtsp://admin:fcse1234@10.1.139.235:554/Streaming/Channels/101")
+RTSP_URL = os.getenv("RTSP_URL", "")
 MODEL_PATH = os.getenv("PLATE_MODEL_PATH", r"D:\hanan_fyp\runs\pk_plate2\weights\best.pt")
 CAMERA_ID = os.getenv("CAMERA_ID", "cam_101")
 CONFIDENCE_THRESHOLD = 0.4
@@ -180,6 +180,10 @@ class SupabaseLogger:
 def main():
     if not os.path.exists(MODEL_PATH):
         print(f"Error: Model not found at {MODEL_PATH}")
+        return
+
+    if not RTSP_URL:
+        print("Error: set RTSP_URL (e.g. rtsp://user:password@camera-host:554/Streaming/Channels/101)")
         return
 
     detector = PlateDetector(MODEL_PATH, use_gpu=True)

@@ -37,7 +37,7 @@ function base64ToBlob(base64: string, type = "image/jpeg"): Blob {
 
 export function RtspPanel({
   onFrame,
-  defaultUrl = "rtsp://admin:fcse1234@10.1.139.235:554/Streaming/Channels/101",
+  defaultUrl = "rtsp://user:password@camera-host:554/Streaming/Channels/101",
   pollMs = 500,
   location,
   cameraId,
